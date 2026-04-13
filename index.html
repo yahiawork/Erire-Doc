@@ -1,0 +1,2583 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Erire Documentation</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="assets/icon.png" alt="Erire icon" class="brand-icon" />
+        <div>
+          <div class="eyebrow">Documentation</div>
+          <h1>Erire Docs</h1>
+          <p class="brand-copy">Current docs, tutorials, Studio notes, and roadmap pages in one static site.</p>
+        </div>
+      </div>
+      <div class="search-panel">
+        <input id="globalSearch" type="search" placeholder="Search docs, tutorials, commands, features..." />
+      </div>
+      <nav class="nav-group"><div class="nav-title">Current Docs</div>
+<button class="nav-link" data-view="current" data-target="readme"><span>Overview</span><small># Erire Documentation This documentation set is split into two categor...</small></button>
+<button class="nav-link" data-view="current" data-target="current-language-reference"><span>Current Language Reference</span><small># Erire Current Language Reference This document describes the languag...</small></button>
+<button class="nav-link" data-view="current" data-target="building-full-apps"><span>Building Full Apps with Erire</span><small># Building Full Apps with Erire This guide explains how experienced de...</small></button>
+<button class="nav-link" data-view="current" data-target="dev-log"><span>Dev Log</span><small># Erire Dev Log This dev log is a repository-based milestone log. It i...</small></button>
+<button class="nav-link" data-view="current" data-target="multiline-inputs"><span>Multiline and Read-Only Inputs</span><small># Multiline And Read-Only Inputs `Erire Bytecode Studio` needed two UI...</small></button>
+</nav>
+<nav class="nav-group"><div class="nav-title">Tutorials</div>
+<button class="nav-link" data-view="tutorial" data-target="tutorial-1-first-window"><span>Tutorial 1: Your First Window</span><small># Tutorial 1: Your First Window This tutorial builds the smallest usef...</small></button>
+<button class="nav-link" data-view="tutorial" data-target="tutorial-2-forms-events-bindings"><span>Tutorial 2: Forms, Events, and Bindings</span><small># Tutorial 2: Forms, Events, and Bindings This tutorial moves from a s...</small></button>
+<button class="nav-link" data-view="tutorial" data-target="tutorial-3-pages-navigation-webview"><span>Tutorial 3: Pages, Navigation, and WebView</span><small># Tutorial 3: Pages, Navigation, and WebView This tutorial shows how t...</small></button>
+<button class="nav-link" data-view="tutorial" data-target="tutorial-4-python-bridge"><span>Tutorial 4: Python Bridge</span><small># Tutorial 4: Python Bridge This tutorial covers the most important in...</small></button>
+<button class="nav-link" data-view="tutorial" data-target="tutorial-5-build-package"><span>Tutorial 5: Build and Package</span><small># Tutorial 5: Build and Package This tutorial explains how to go from ...</small></button>
+</nav>
+<nav class="nav-group"><div class="nav-title">Studio</div>
+<button class="nav-link" data-view="studio" data-target="erire-studio-design"><span>Erire Studio Design</span><small># Erire Studio Design ## A. Product Vision Erire Studio is the dedicat...</small></button>
+</nav>
+<nav class="nav-group"><div class="nav-title">Design / Roadmap</div>
+<button class="nav-link" data-view="design" data-target="erire-next-language-design"><span>Erire Next Language Design</span><small># Erire Next Language Design ## Executive Summary Erire vNext should s...</small></button>
+</nav>
+      <nav class="nav-group"><div class="nav-title">Download / Links</div>
+<button class="nav-link" data-view="release" data-target="msi-release"><span>Erire MSI</span><small>Dedicated MSI download page with release notes, first public installer details, features, and project links.</small></button>
+<button class="nav-link external-link" data-external="https://yahiawork.github.io"><span>Portfolio Site</span><small>yahiawork.github.io</small></button>
+<button class="nav-link external-link" data-external="https://firststandstudio.github.io"><span>Studio Site</span><small>firststandstudio.github.io</small></button>
+<button class="nav-link external-link" data-external="https://github.com/yahiawork"><span>GitHub</span><small>github.com/yahiawork</small></button>
+<button class="nav-link external-link" data-external="https://instagram.com/"><span>Instagram</span><small>Add your exact Instagram profile link here later if needed.</small></button>
+</nav>
+      <div class="sidebar-footer">
+        <div class="kbd-row"><span>Ctrl + K</span><span>Focus search</span></div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div>
+          <div class="page-kicker" id="pageKicker">Current Docs</div>
+          <h2 id="pageTitle">Overview</h2>
+        </div>
+        <div class="topbar-actions">
+          <button id="toggleTheme" class="ghost-btn">Toggle theme</button>
+        </div>
+      </header>
+
+      <section class="hero-card">
+        <div>
+          <div class="hero-kicker">Black / white / gray static docs</div>
+          <h3>All uploaded Markdown has been merged into this HTML documentation site.</h3>
+          <p>Browse the reference, app-building guide, tutorials, Studio notes, future design docs, and the new MSI release page from one place with built-in search.</p>
+          <div class="hero-links">
+            <a class="hero-link" href="#release/msi-release">Open MSI page</a>
+            <a class="hero-link" href="https://yahiawork.github.io" target="_blank" rel="noreferrer">Portfolio</a>
+            <a class="hero-link" href="https://firststandstudio.github.io" target="_blank" rel="noreferrer">Studio Site</a>
+            <a class="hero-link" href="https://github.com/yahiawork" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="hero-link" href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="searchResults" class="search-results hidden"></section>
+
+      <article id="release-msi-release" class="doc-page hidden msi-page">
+  <section class="msi-hero">
+    <div class="msi-hero-copy">
+      <div class="release-pill">Windows Installer • First Public MSI</div>
+      <h1>Download Erire MSI</h1>
+      <p>Install the first packaged MSI release of Erire: a Windows-first desktop UI language, runtime, packager, and Studio-oriented workflow built around fast native interface development.</p>
+      <div class="msi-actions">
+        <a class="download-btn big-download" href="downloads/Erire.msi">Download Erire.msi</a>
+        <a class="hero-link" href="https://github.com/yahiawork" target="_blank" rel="noreferrer">View GitHub</a>
+        <a class="hero-link" href="https://yahiawork.github.io" target="_blank" rel="noreferrer">Portfolio</a>
+      </div>
+      <p class="muted-note">Put the real <code>Erire.msi</code> file in the <code>downloads/</code> folder to make the button work as a local direct download.</p>
+    </div>
+    <div class="msi-hero-stats">
+      <div class="stat-card"><span>Release</span><strong>v1 MSI</strong><small>First public Windows installer</small></div>
+      <div class="stat-card"><span>Focus</span><strong>Desktop UI</strong><small>Native app workflow with Python bridge support</small></div>
+      <div class="stat-card"><span>Includes</span><strong>Runtime + Tooling</strong><small>Language, packaging direction, and Studio ecosystem</small></div>
+    </div>
+  </section>
+
+  <section class="callout-grid msi-top-grid">
+    <section class="callout-card accent-card">
+      <h2>Latest Update</h2>
+      <p><strong>This is the first public MSI release of Erire.</strong></p>
+      <p>It marks the first installer-style Windows distribution for the project, turning Erire into a more product-like downloadable release instead of only a source or loose binary workflow.</p>
+    </section>
+    <section class="callout-card">
+      <h2>Project Links</h2>
+      <ul class="link-list">
+        <li><a href="https://yahiawork.github.io" target="_blank" rel="noreferrer">Portfolio Site</a></li>
+        <li><a href="https://firststandstudio.github.io" target="_blank" rel="noreferrer">Studio Site</a></li>
+        <li><a href="https://github.com/yahiawork" target="_blank" rel="noreferrer">GitHub</a></li>
+        <li><a href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a></li>
+      </ul>
+    </section>
+  </section>
+
+  <section>
+    <h2>What This First MSI Release Introduces</h2>
+    <div class="feature-grid">
+      <article class="feature-card"><h3>Windows Installer Flow</h3><p>A dedicated MSI download target for a cleaner install path and a more professional release presentation.</p></article>
+      <article class="feature-card"><h3>UI-First Language Identity</h3><p>Erire stays centered on readable chain-based syntax for native desktop UI creation instead of generic framework-heavy setup.</p></article>
+      <article class="feature-card"><h3>Runtime + Native Controls</h3><p>Includes the current desktop runtime direction with text, button, input, image, webview, card, panel, and box-style UI nodes.</p></article>
+      <article class="feature-card"><h3>Python Bridge Workflow</h3><p>Supports the Erire + Python architecture where UI stays in Erire and heavier logic moves into Python helpers and automation code.</p></article>
+      <article class="feature-card"><h3>Events and Bindings</h3><p>Current support includes <code>onClick[...]</code>, <code>onChange[...]</code>, <code>onLoad[...]</code>, and <code>input.bind[...]</code> for direct interaction flow.</p></article>
+      <article class="feature-card"><h3>Packaging Direction</h3><p>The MSI page sits beside Erire’s existing packaged-app story built around <code>app.json</code>, assets, icons, and Python-backed app distribution.</p></article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Main Features In This Release</h2>
+    <div class="check-grid">
+      <div class="check-item">Native desktop UI nodes: text, button, input, image, webview, box, card, panel</div>
+      <div class="check-item">Multi-page app flow with <code>page[...]</code> and <code>screen.show[...]</code></div>
+      <div class="check-item">Live interactions through <code>onClick[...]</code>, <code>onChange[...]</code>, and <code>onLoad[...]</code></div>
+      <div class="check-item">Input variable binding with <code>input.bind[...]</code></div>
+      <div class="check-item">Multiline and read-only input support for logs, editors, and generated output</div>
+      <div class="check-item">Python bridge imports through <code>import python</code> and <code>py.call[...]</code></div>
+      <div class="check-item">Structured JSON results mapped into dotted runtime variables</div>
+      <div class="check-item">Built-in control flow and helper calls for math, text, time, and system values</div>
+      <div class="check-item">WebView navigation, reload, back/forward, and JavaScript execution support</div>
+      <div class="check-item">Erire Studio ecosystem direction and project workflow foundation</div>
+    </div>
+  </section>
+
+  <section class="release-note-box">
+    <h2>Release Positioning</h2>
+    <p>This page presents Erire as an installable product entry point. It is best used as the public landing page for the Windows installer, with the MSI button at the top, release notes underneath, and your core public links nearby.</p>
+    <p>When you have the final installer ready, place the real file at <code>downloads/Erire.msi</code>. The large button on this page is already wired to that path.</p>
+  </section>
+</article>
+
+<article id="current-readme" class="doc-page hidden">
+<h1 id="erire-documentation">Erire Documentation</h1>
+<p>This documentation set is split into two categories:</p>
+<ul>
+<li>current product documentation: what the runtime and tooling support today</li>
+<li>design documentation: roadmap and future-facing ideas that are not yet the current language</li>
+</ul>
+<p>If you are building an app right now, stay inside the &quot;Current&quot; and &quot;Tutorials&quot; sections first.</p>
+<h2 id="start-here">Start Here</h2>
+<ul>
+<li><a href="../README.md">../README.md</a>: repository overview, build, CLI, and doc map</li>
+<li><a href="current-language-reference.md">Current Language Reference</a>: the best single reference for the language as it exists today</li>
+<li><a href="building-full-apps-with-erire.md">Building Full Apps with Erire</a>: how to go from idea to structured desktop application</li>
+</ul>
+<h2 id="current-documentation">Current Documentation</h2>
+<ul>
+<li><a href="current-language-reference.md">Current Language Reference</a></li>
+<li><a href="dev-log.md">Dev Log</a></li>
+<li><a href="building-full-apps-with-erire.md">Building Full Apps with Erire</a></li>
+<li><a href="erire-multiline-inputs.md">Multiline and Read-Only Inputs</a></li>
+</ul>
+<h2 id="tutorials">Tutorials</h2>
+<ul>
+<li><a href="tutorials/01-first-window.md">Tutorial 1: Your First Window</a></li>
+<li><a href="tutorials/02-forms-events-and-bindings.md">Tutorial 2: Forms, Events, and Bindings</a></li>
+<li><a href="tutorials/03-pages-navigation-and-webview.md">Tutorial 3: Pages, Navigation, and WebView</a></li>
+<li><a href="tutorials/04-python-bridge.md">Tutorial 4: Python Bridge</a></li>
+<li><a href="tutorials/05-build-and-package.md">Tutorial 5: Build and Package</a></li>
+</ul>
+<h2 id="studio-documentation">Studio Documentation</h2>
+<ul>
+<li><a href="../studio/README.md">Studio README</a></li>
+<li><a href="../studio/ARCHITECTURE.md">Studio Architecture</a></li>
+<li><a href="erire-studio.md">Erire Studio Design Notes</a></li>
+</ul>
+<h2 id="design-and-roadmap-docs">Design and Roadmap Docs</h2>
+<p>These files are important, but they describe direction rather than the exact current runtime:</p>
+<ul>
+<li><a href="erire-next-language.md">Erire Next Language Design</a></li>
+<li><a href="erire-studio.md">Erire Studio Design Notes</a></li>
+</ul>
+<h2 id="how-to-read-this-repo">How To Read This Repo</h2>
+<p>Use this order if you are new:</p>
+<ol>
+<li>Read the root <a href="../README.md">README</a>.</li>
+<li>Read the <a href="current-language-reference.md">Current Language Reference</a>.</li>
+<li>Work through the tutorials in order.</li>
+<li>Use <a href="building-full-apps-with-erire.md">Building Full Apps with Erire</a> when you start structuring a real app.</li>
+<li>Use the Studio docs if you want the IDE workflow.</li>
+</ol>
+
+</article><article id="current-current-language-reference" class="doc-page hidden">
+<h1 id="erire-current-language-reference">Erire Current Language Reference</h1>
+<p>This document describes the language and tooling supported by the current runtime in this repository. It is intentionally grounded in the current parser, semantic analyzer, runtime, UI layer, and packager.</p>
+<h2 id="1-mental-model">1. Mental Model</h2>
+<p>An Erire program is a sequence of statements that runs in source order.</p>
+<ul>
+<li>UI is created with <code>screen.add[...]</code>.</li>
+<li>Runtime state is stored with <code>var.set[...]</code>.</li>
+<li>Inputs can push text into variables through <code>input.bind[...]</code>.</li>
+<li>Event blocks run later in response to user actions.</li>
+<li><code>backend.er</code> is loaded automatically before the entry file when it sits beside it.</li>
+</ul>
+<p>Important runtime behavior:</p>
+<ul>
+<li><code>screen.add[...]</code> creates a node immediately.</li>
+<li><code>screen.setText[...]</code> only works after a node with that <code>id</code> exists.</li>
+<li><code>onLoad[...]</code> is deferred until the UI has been created.</li>
+<li>Accessing an undefined variable currently resolves to an empty string.</li>
+</ul>
+<h2 id="2-program-structure">2. Program Structure</h2>
+<p>The two most common project shapes are:</p>
+<h3 id="small-cli-created-project">Small CLI-created project</h3>
+<pre><code class="language-text">MyApp/
+  main.er
+  backend.er
+  app.json
+  assets/
+  python/
+  cpp/
+</code></pre>
+<h3 id="larger-studio-style-project">Larger Studio-style project</h3>
+<pre><code class="language-text">MyApp/
+  app.json
+  src/
+    main.er
+    backend.er
+  pages/
+  components/
+  assets/
+  python/
+  build/
+  tests/
+</code></pre>
+<h2 id="3-supported-statements">3. Supported Statements</h2>
+<h3 id="screen-create"><code>screen.create[...]</code></h3>
+<p>Creates or configures the app window.</p>
+<p>Accepted shapes today:</p>
+<pre><code class="language-erire">screen.create[100; 100; 900; 560]
+screen.create[app; size; 100; 100; 900; 560]
+</code></pre>
+<p>The six-argument form is the one used by most current examples.</p>
+<h3 id="screen-title"><code>screen.title[...]</code></h3>
+<p>Sets the window title.</p>
+<pre><code class="language-erire">screen.title[&quot;My App&quot;]
+</code></pre>
+<h3 id="screen-bg"><code>screen.bg[...]</code></h3>
+<p>Sets the window background color.</p>
+<pre><code class="language-erire">screen.bg[&quot;#0f172a&quot;]
+</code></pre>
+<h3 id="screen-add"><code>screen.add[...]</code></h3>
+<p>Adds one UI element to the active app.</p>
+<pre><code class="language-erire">screen.add[text.value[&quot;Hello&quot;]]
+</code></pre>
+<h3 id="screen-show"><code>screen.show[...]</code></h3>
+<p>Switches the current page.</p>
+<pre><code class="language-erire">screen.show[&quot;settings&quot;]
+</code></pre>
+<p>The runtime starts on page <code>main</code>. If you place nodes on another page such as <code>home</code>, call <code>screen.show[&quot;home&quot;]</code> during startup.</p>
+<h3 id="screen-settext"><code>screen.setText[...]</code></h3>
+<p>Updates the text/value of an existing node by <code>id</code>.</p>
+<pre><code class="language-erire">screen.setText[&quot;headline&quot;; &quot;Updated&quot;]
+</code></pre>
+<p>This is also how current Erire changes:</p>
+<ul>
+<li>text node content</li>
+<li>input content</li>
+<li>button labels</li>
+<li>webview URLs by changing the webview node text</li>
+</ul>
+<h3 id="var-set"><code>var.set[...]</code></h3>
+<p>Creates or updates a runtime variable.</p>
+<pre><code class="language-erire">var.set[&quot;status&quot;; &quot;Ready&quot;]
+var.set[&quot;sum&quot;; math.add[2; 3]]
+</code></pre>
+<h3 id="import-python-quot-py-quot-as-alias"><code>import python &quot;...py&quot; as alias</code></h3>
+<p>Registers a Python bridge script.</p>
+<pre><code class="language-erire">import python &quot;./python/app_bridge.py&quot; as app
+</code></pre>
+<p>The active import system used in real apps today is the Python import form above.</p>
+<h3 id="control-flow">Control Flow</h3>
+<p>Erire currently supports:</p>
+<pre><code class="language-erire">if[$count &gt; 0][
+    screen.setText[&quot;status&quot;; &quot;Positive&quot;]
+] else.if[$count == 0][
+    screen.setText[&quot;status&quot;; &quot;Zero&quot;]
+] else[
+    screen.setText[&quot;status&quot;; &quot;Negative&quot;]
+]
+
+while[$counter &lt;= 5][
+    var.set[&quot;counter&quot;; math.add[$counter; 1]]
+]
+
+for[&quot;i&quot;; 1; 4][
+    screen.setText[&quot;status&quot;; $i]
+]
+</code></pre>
+<p><code>for[...]</code> accepts:</p>
+<pre><code class="language-erire">for[&quot;name&quot;; start; end]
+for[&quot;name&quot;; start; end; step]
+</code></pre>
+<h2 id="4-values-and-expressions">4. Values and Expressions</h2>
+<p>Erire values can be:</p>
+<ul>
+<li>strings: <code>&quot;Hello&quot;</code></li>
+<li>numbers: <code>42</code></li>
+<li>booleans: <code>true</code>, <code>false</code></li>
+<li>symbols: <code>app</code></li>
+<li>variables: <code>$title</code>, <code>$result.message</code>, <code>$result.items.0</code></li>
+<li>call expressions: <code>math.mul[6; 7]</code>, <code>py.call[&quot;app.fetch&quot;]</code></li>
+</ul>
+<p>Structured JSON returned from Python is flattened into dotted variable paths. If Python returns:</p>
+<pre><code class="language-json">{ &quot;message&quot;: &quot;Done&quot;, &quot;stats&quot;: { &quot;count&quot;: 3 } }
+</code></pre>
+<p>Then Erire can read:</p>
+<pre><code class="language-erire">$result.message
+$result.stats.count
+</code></pre>
+<h2 id="5-elements">5. Elements</h2>
+<h3 id="text-label"><code>text</code> / <code>label</code></h3>
+<p>Text output nodes.</p>
+<p>Common usage:</p>
+<pre><code class="language-erire">screen.add[text.value[&quot;Hello&quot;].size[24].color[&quot;#ffffff&quot;]]
+</code></pre>
+<h3 id="btn-button"><code>btn</code> / <code>button</code></h3>
+<p>Clickable button nodes.</p>
+<pre><code class="language-erire">screen.add[button.text[&quot;Save&quot;].onClick[
+    screen.setText[&quot;status&quot;; &quot;Saved&quot;]
+]]
+</code></pre>
+<h3 id="input"><code>input</code></h3>
+<p>Text input fields, including multiline and read-only variants.</p>
+<pre><code class="language-erire">screen.add[input.placeholder[&quot;Type here&quot;].bind[&quot;query&quot;]]
+</code></pre>
+<h3 id="image"><code>image</code></h3>
+<p>Bitmap/image nodes.</p>
+<pre><code class="language-erire">screen.add[image.src[&quot;./assets/logo.png&quot;].fit[&quot;contain&quot;]]
+</code></pre>
+<h3 id="webview"><code>webview</code></h3>
+<p>Embedded browser node. A URL is required.</p>
+<pre><code class="language-erire">screen.add[webview.url[&quot;https://example.com&quot;].id[&quot;browser&quot;]]
+</code></pre>
+<h3 id="box-card-panel"><code>box</code> / <code>card</code> / <code>panel</code></h3>
+<p>Surface/container-like nodes for custom-drawn panels and cards.</p>
+<pre><code class="language-erire">screen.add[card.text[&quot;Overview&quot;].radius[20].bg[&quot;#111827&quot;]]
+</code></pre>
+<p><code>card</code> and <code>panel</code> are specialized aliases of <code>box</code> with different default surface styles.</p>
+<h2 id="6-common-properties">6. Common Properties</h2>
+<p>These properties are shared by most elements:</p>
+<p>| Property | Meaning |
+| --- | --- |
+| <code>x</code>, <code>y</code> | Position |
+| <code>w</code>, <code>h</code> | Size |
+| <code>id</code> | Node id for later <code>screen.setText[...]</code> or command targeting |
+| <code>page</code> | Page name used by <code>screen.show[...]</code> |
+| <code>preset</code> | Built-in style preset |
+| <code>color</code> | Text color |
+| <code>bg</code> | Main background color |
+| <code>bg2</code> | Secondary background color for painted surfaces |
+| <code>border</code> | Border width |
+| <code>borderColor</code> | Border color |
+| <code>radius</code> | Corner radius |
+| <code>padding</code> | Inner spacing |
+| <code>shadow</code> | Shadow size |
+| <code>shadowColor</code> | Shadow color |
+| <code>align</code> | Text alignment: <code>left/start</code>, <code>center/middle</code>, <code>right/end</code> |
+| <code>onLoad</code> | Event block executed after app creation |</p>
+<p>Notes:</p>
+<ul>
+<li>Colors currently use <code>#RRGGBB</code>.</li>
+<li><code>border</code> is a width, not a color.</li>
+<li>Absolute positioning is still the main layout model today.</li>
+</ul>
+<h2 id="7-element-specific-properties">7. Element-Specific Properties</h2>
+<h3 id="text-label">Text / Label</h3>
+<ul>
+<li><code>text</code> or <code>value</code></li>
+<li><code>size</code></li>
+</ul>
+<h3 id="button">Button</h3>
+<ul>
+<li><code>text</code> or <code>value</code></li>
+<li><code>icon</code></li>
+<li><code>iconSize</code></li>
+<li><code>size</code></li>
+<li><code>onClick</code></li>
+</ul>
+<h3 id="input">Input</h3>
+<ul>
+<li><code>text</code> or <code>value</code></li>
+<li><code>placeholder</code></li>
+<li><code>bind</code></li>
+<li><code>size</code></li>
+<li><code>multiline</code></li>
+<li><code>readonly</code> / <code>readOnly</code></li>
+<li><code>onChange</code></li>
+<li><code>onClick</code></li>
+</ul>
+<h3 id="image">Image</h3>
+<ul>
+<li><code>src</code></li>
+<li><code>fit</code>: <code>contain</code>, <code>cover</code>, <code>stretch</code>, <code>center</code></li>
+<li><code>iconSize</code></li>
+<li><code>onClick</code></li>
+</ul>
+<h3 id="webview">WebView</h3>
+<ul>
+<li><code>url</code></li>
+</ul>
+<h3 id="box-card-panel">Box / Card / Panel</h3>
+<ul>
+<li><code>text</code> or <code>value</code></li>
+<li><code>onClick</code></li>
+</ul>
+<h2 id="8-events-and-bindings">8. Events and Bindings</h2>
+<h3 id="onclick"><code>onClick[...]</code></h3>
+<p>Runs when a button or clickable node is activated.</p>
+<pre><code class="language-erire">screen.add[button.text[&quot;Refresh&quot;].onClick[
+    screen.setText[&quot;status&quot;; &quot;Refreshing&quot;]
+]]
+</code></pre>
+<h3 id="onchange"><code>onChange[...]</code></h3>
+<p>Runs when an input changes.</p>
+<pre><code class="language-erire">screen.add[input.bind[&quot;query&quot;].onChange[
+    screen.setText[&quot;status&quot;; $query]
+]]
+</code></pre>
+<h3 id="onload"><code>onLoad[...]</code></h3>
+<p>Runs after the UI tree has been created. This is the safest place to do initial <code>py.call[...]</code> setup that fills the interface.</p>
+<pre><code class="language-erire">screen.add[text.value[&quot;&quot;].id[&quot;boot&quot;].onLoad[
+    var.set[&quot;snapshot&quot;; py.call[&quot;app.bootstrap&quot;]]
+    screen.setText[&quot;status&quot;; $snapshot.message]
+]]
+</code></pre>
+<h3 id="input-bind"><code>input.bind[...]</code></h3>
+<p><code>bind</code> links an input to a runtime variable.</p>
+<p>Behavior today:</p>
+<ul>
+<li>the initial input text is copied into the bound variable</li>
+<li>on every change, the variable is updated before the <code>onChange[...]</code> block runs</li>
+</ul>
+<h2 id="9-built-in-native-calls">9. Built-In Native Calls</h2>
+<p>These are the current native value calls accepted by semantic analysis and executed by the runtime.</p>
+<h3 id="system-and-time">System and Time</h3>
+<ul>
+<li><code>time.now[]</code></li>
+<li><code>sys.cwd[]</code></li>
+<li><code>sys.hostname[]</code></li>
+<li><code>sys.platform[]</code></li>
+</ul>
+<h3 id="text">Text</h3>
+<ul>
+<li><code>text.upper[value]</code></li>
+<li><code>text.lower[value]</code></li>
+<li><code>text.title[value]</code></li>
+<li><code>text.length[value]</code></li>
+<li><code>text.contains[text; needle]</code></li>
+<li><code>text.concat[a; b; c; ...]</code></li>
+</ul>
+<h3 id="math">Math</h3>
+<ul>
+<li><code>math.add[...]</code></li>
+<li><code>math.sub[...]</code></li>
+<li><code>math.mul[...]</code></li>
+<li><code>math.div[...]</code></li>
+<li><code>math.min[...]</code></li>
+<li><code>math.max[...]</code></li>
+</ul>
+<h2 id="10-python-bridge">10. Python Bridge</h2>
+<p>Python bridge calls use:</p>
+<pre><code class="language-erire">py.call[&quot;alias.function&quot;; arg1; arg2; ...]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-erire">import python &quot;./python/app_bridge.py&quot; as app
+var.set[&quot;result&quot;; py.call[&quot;app.ping&quot;]]
+screen.setText[&quot;status&quot;; $result.message]
+</code></pre>
+<p>Current bridge rules:</p>
+<ul>
+<li>target format must be <code>alias.function</code></li>
+<li>the alias must have been registered with <code>import python</code></li>
+<li>arguments are JSON-serialized, then base64-encoded</li>
+<li>Erire invokes the script with:<ul>
+<li><code>--erire-call &lt;function&gt;</code></li>
+<li><code>--erire-args-b64 &lt;encoded-json-list&gt;</code></li>
+</ul>
+</li>
+<li>the script must print JSON or a scalar-like payload to stdout</li>
+</ul>
+<p>When Python returns structured JSON, Erire stores both the root variable and the dotted child paths.</p>
+<h2 id="11-generic-commands">11. Generic Commands</h2>
+<p>These are the non-statement commands currently supported by semantic analysis and runtime execution.</p>
+<h3 id="webview-commands">WebView Commands</h3>
+<pre><code class="language-erire">webview.open[&quot;browser&quot;; &quot;https://example.com&quot;]
+webview.back[&quot;browser&quot;]
+webview.forward[&quot;browser&quot;]
+webview.reload[&quot;browser&quot;]
+webview.runJS[&quot;browser&quot;; &quot;document.title='Updated'&quot;]
+</code></pre>
+<h3 id="window-commands">Window Commands</h3>
+<pre><code class="language-erire">screen.icon[&quot;./assets/logo.png&quot;]
+window.icon[&quot;./assets/logo.png&quot;]
+window.caption[&quot;Another Title&quot;]
+</code></pre>
+<h3 id="console-commands">Console Commands</h3>
+<pre><code class="language-erire">console.open[&quot;powershell&quot;]
+</code></pre>
+<p>Built-in profiles include <code>powershell</code>, <code>cmd</code>, <code>wsl</code>, <code>ubuntu</code>, <code>debian</code>, <code>kali</code>, and <code>devshell</code>. Custom profiles can be added in <code>tools/console_profiles.txt</code>.</p>
+<h3 id="animation-commands">Animation Commands</h3>
+<pre><code class="language-erire">anim.play[&quot;hero&quot;; &quot;float&quot;; 1800; &quot;loop&quot;]
+anim.oscillate[&quot;hero&quot;; &quot;y&quot;; 18; 1800; &quot;loop&quot;]
+anim.keyframes[&quot;hero&quot;; &quot;x&quot;; &quot;0:0,0.5:20,1:0&quot;; 1400; &quot;loop&quot;]
+anim.stop[&quot;hero&quot;]
+</code></pre>
+<p>These commands are implemented for the Windows-first runtime path.</p>
+<h2 id="12-built-in-presets">12. Built-In Presets</h2>
+<p>The UI layer currently contains preset handling for:</p>
+<ul>
+<li><code>title</code></li>
+<li><code>heroTitle</code></li>
+<li><code>muted</code></li>
+<li><code>caption</code></li>
+<li><code>overline</code></li>
+<li><code>primary</code></li>
+<li><code>secondary</code></li>
+<li><code>ghost</code></li>
+<li><code>success</code></li>
+<li><code>danger</code></li>
+<li><code>search</code></li>
+<li><code>toolbarField</code></li>
+<li><code>toolbar</code></li>
+<li><code>sidebar</code></li>
+<li><code>card</code></li>
+<li><code>metric</code></li>
+<li><code>statusBar</code></li>
+<li><code>browser</code></li>
+<li><code>webviewShell</code></li>
+</ul>
+<p>Presets are convenience styling helpers, not a full theme language yet.</p>
+<h2 id="13-app-json">13. <code>app.json</code></h2>
+<p><code>app.json</code> is used by runtime, Studio, and packaging tooling.</p>
+<p>Common fields seen in this repository:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;My App&quot;,
+  &quot;entry&quot;: &quot;src/main.er&quot;,
+  &quot;output&quot;: &quot;build/my_app.exe&quot;,
+  &quot;icon&quot;: &quot;assets/brand/app.ico&quot;,
+  &quot;win_title&quot;: &quot;My App&quot;,
+  &quot;win_icon&quot;: &quot;assets/brand/app.ico&quot;,
+  &quot;python&quot;: &quot;python/app_bridge.py&quot;,
+  &quot;type&quot;: &quot;desktop-ui&quot;,
+  &quot;template&quot;: &quot;workspace&quot;,
+  &quot;description&quot;: &quot;Structured workspace tool&quot;,
+  &quot;version&quot;: &quot;0.1.0&quot;
+}
+</code></pre>
+<p>Current behavior by field:</p>
+<ul>
+<li><code>name</code>: used by runtime as a fallback title and by tooling metadata</li>
+<li><code>entry</code>: used by Studio/project tooling</li>
+<li><code>output</code>: used by template/tooling metadata</li>
+<li><code>icon</code>: runtime + packager icon path</li>
+<li><code>win_title</code>: runtime and packaging title override</li>
+<li><code>win_icon</code>: runtime and packaging icon override</li>
+<li><code>python</code>, <code>type</code>, <code>template</code>, <code>description</code>, <code>version</code>: tooling metadata used mainly by Studio templates and project workflow</li>
+</ul>
+<p>Important current nuance:</p>
+<ul>
+<li>the runtime and packager look for <code>app.json</code> beside the entry <code>.er</code> file</li>
+<li>Studio project discovery uses a root-level <code>app.json</code></li>
+</ul>
+<p>If your project entry lives in <code>src/main.er</code> and you want runtime/packager metadata such as <code>win_title</code> or <code>win_icon</code> honored today, keep that metadata in the entry directory or align your project layout accordingly.</p>
+<h2 id="14-packaging-behavior">14. Packaging Behavior</h2>
+<p><code>erire --build ...</code> packages:</p>
+<ul>
+<li>the entry <code>.er</code> file</li>
+<li>auto-loaded <code>backend.er</code></li>
+<li>imported Python bridges</li>
+<li><code>assets/</code></li>
+<li><code>python/</code></li>
+<li><code>app.json</code></li>
+<li>optional compiled helper from <code>cpp/</code></li>
+</ul>
+<p>Important packaging notes:</p>
+<ul>
+<li>Python bridge packaging requires <code>PyInstaller</code>.</li>
+<li>PNG icons are converted through <code>tools/png_to_ico.py</code>.</li>
+<li>The packaged app is appended to <code>ErireRunner.exe</code>.</li>
+<li>At runtime, the packaged payload is extracted to a temp directory before execution.</li>
+</ul>
+<h2 id="15-limits-and-non-goals-of-the-current-runtime">15. Limits and Non-Goals of the Current Runtime</h2>
+<ul>
+<li>Layout is still explicit and coordinate-based.</li>
+<li>The component/layout/state system described in <code>erire-next-language.md</code> is not the current shipped language.</li>
+<li>The runtime is optimized around desktop UI, not general-purpose scripting.</li>
+<li>The implementation is Windows-first, even though a few interfaces have fallback stubs.</li>
+</ul>
+<p>For app architecture guidance rather than syntax details, continue with <a href="building-full-apps-with-erire.md">Building Full Apps with Erire</a>.</p>
+
+</article><article id="current-building-full-apps" class="doc-page hidden">
+<h1 id="building-full-apps-with-erire">Building Full Apps with Erire</h1>
+<p>This guide explains how experienced developers should think about building a complete desktop application with Erire as it exists today.</p>
+<p>The short version:</p>
+<ul>
+<li>use Erire for the desktop UI shell</li>
+<li>use <code>backend.er</code> for lightweight app logic</li>
+<li>use Python for data, files, automation, APIs, and non-trivial processing</li>
+<li>use <code>assets/</code>, <code>app.json</code>, and packaging from the start</li>
+<li>grow the project in the Studio-style structure even if you are not using Studio yet</li>
+</ul>
+<h2 id="1-choose-the-right-project-shape">1. Choose The Right Project Shape</h2>
+<p>For serious work, use a structured layout:</p>
+<pre><code class="language-text">MyApp/
+  app.json
+  src/
+    main.er
+    backend.er
+  pages/
+  components/
+  assets/
+  python/
+  build/
+  tests/
+</code></pre>
+<p>Why this shape works well:</p>
+<ul>
+<li><code>src/main.er</code> owns the screen and event wiring</li>
+<li><code>src/backend.er</code> owns native Erire setup and derived values</li>
+<li><code>pages/</code> holds page-specific ideas even before Erire gets full component imports</li>
+<li><code>assets/</code> is ready for images, icons, and packaged resources</li>
+<li><code>python/</code> gives the app a real backend layer</li>
+<li><code>build/</code> keeps outputs out of source folders</li>
+</ul>
+<p>Even if the runtime does not yet import <code>pages/*.er</code> as first-class Erire modules, this structure keeps the project sane as it grows.</p>
+<p>One current implementation detail to plan around:</p>
+<ul>
+<li>Studio uses a root <code>app.json</code> for project discovery</li>
+<li>runtime and packaging metadata are currently read beside the entry <code>.er</code> file</li>
+</ul>
+<p>So if your entry is <code>src/main.er</code> and you rely on runtime metadata like <code>win_title</code> or <code>win_icon</code>, be deliberate about where that metadata lives.</p>
+<h2 id="2-split-logic-into-three-layers">2. Split Logic Into Three Layers</h2>
+<h3 id="layer-a-ui-composition-in-main-er">Layer A: UI Composition in <code>main.er</code></h3>
+<p>Keep <code>main.er</code> focused on:</p>
+<ul>
+<li>window creation</li>
+<li>page shells</li>
+<li>ids</li>
+<li>event wiring</li>
+<li>calls to <code>screen.show[...]</code></li>
+<li>calls to <code>screen.setText[...]</code></li>
+</ul>
+<h3 id="layer-b-lightweight-native-logic-in-backend-er">Layer B: Lightweight Native Logic in <code>backend.er</code></h3>
+<p>Use <code>backend.er</code> for:</p>
+<ul>
+<li>startup values</li>
+<li>string formatting</li>
+<li>math</li>
+<li>native loops</li>
+<li>simple state derivation</li>
+</ul>
+<p>This keeps obvious setup logic inside Erire itself.</p>
+<h3 id="layer-c-heavy-logic-in-python">Layer C: Heavy Logic in <code>python/</code></h3>
+<p>Use Python when the app needs:</p>
+<ul>
+<li>filesystem access</li>
+<li>JSON and config handling</li>
+<li>HTTP or external services</li>
+<li>search/indexing</li>
+<li>automation</li>
+<li>system inspection</li>
+<li>data transformation</li>
+</ul>
+<p>This keeps the UI layer small and readable while still letting the app do real work.</p>
+<h2 id="3-design-the-app-before-writing-widgets">3. Design The App Before Writing Widgets</h2>
+<p>Because current Erire layout is coordinate-driven, planning matters.</p>
+<p>Before coding:</p>
+<ol>
+<li>List your pages.</li>
+<li>Decide which ids will be updated later.</li>
+<li>Decide which inputs need <code>bind[...]</code>.</li>
+<li>Decide which actions stay native and which go to Python.</li>
+<li>Sketch the rectangles and spacing system you will use.</li>
+</ol>
+<p>Good questions to answer first:</p>
+<ul>
+<li>What is the home page?</li>
+<li>Which controls need dynamic updates?</li>
+<li>Which results are shown as text, lists, or embedded web pages?</li>
+<li>What should load in <code>onLoad[...]</code>?</li>
+</ul>
+<h2 id="4-build-one-stable-screen-shell-first">4. Build One Stable Screen Shell First</h2>
+<p>In current Erire, strong apps usually start with:</p>
+<ul>
+<li>title area</li>
+<li>content area</li>
+<li>status area</li>
+<li>primary action buttons</li>
+</ul>
+<p>That shell gives you stable ids and stable geometry before you layer in data.</p>
+<p>Recommended shell ids:</p>
+<ul>
+<li><code>page_title</code></li>
+<li><code>page_subtitle</code></li>
+<li><code>status</code></li>
+<li><code>primary_input</code></li>
+<li><code>result_view</code></li>
+</ul>
+<p>Keep ids predictable and descriptive. <code>screen.setText[...]</code> is one of the main update paths in the runtime, so id discipline is part of app architecture.</p>
+<h2 id="5-treat-pages-as-distinct-ui-states">5. Treat Pages As Distinct UI States</h2>
+<p>Use <code>page[...]</code> and <code>screen.show[...]</code> to separate workflows cleanly.</p>
+<p>Typical page split:</p>
+<ul>
+<li><code>overview</code></li>
+<li><code>editor</code></li>
+<li><code>logs</code></li>
+<li><code>settings</code></li>
+<li><code>help</code></li>
+</ul>
+<p>This is better than trying to cram every control into one giant screen and manually hide pieces with text tricks.</p>
+<h2 id="6-use-bind-for-form-inputs">6. Use <code>bind[...]</code> For Form Inputs</h2>
+<p>Inputs with <code>bind[...]</code> are one of the most practical tools in current Erire.</p>
+<p>Use them for:</p>
+<ul>
+<li>search boxes</li>
+<li>form fields</li>
+<li>filenames</li>
+<li>filters</li>
+<li>URLs</li>
+</ul>
+<p>Then let event blocks consume the variable:</p>
+<pre><code class="language-erire">screen.add[input.bind[&quot;query&quot;].id[&quot;queryInput&quot;].onChange[
+    screen.setText[&quot;status&quot;; $query]
+]]
+</code></pre>
+<p>This keeps the UI readable and reduces manual input plumbing.</p>
+<h2 id="7-push-data-work-to-python-early">7. Push Data Work To Python Early</h2>
+<p>A common Erire mistake is trying to force too much non-UI behavior into <code>screen.setText[...]</code> chains.</p>
+<p>Better approach:</p>
+<ul>
+<li>Erire owns the interaction</li>
+<li>Python owns the expensive or stateful work</li>
+<li>Erire receives a clean result payload</li>
+</ul>
+<p>Example flow:</p>
+<ol>
+<li>User clicks <code>Load Project</code>.</li>
+<li>Erire calls <code>py.call[&quot;app.scan_project&quot;; $project_root]</code>.</li>
+<li>Python returns a dictionary with counts, labels, and paths.</li>
+<li>Erire updates several nodes from <code>$scan.count</code>, <code>$scan.summary</code>, <code>$scan.root</code>.</li>
+</ol>
+<p>That pattern scales much better than building pseudo-business logic inside the UI file.</p>
+<h2 id="8-use-structured-python-results-deliberately">8. Use Structured Python Results Deliberately</h2>
+<p>Erire stores structured JSON into dotted variables automatically.</p>
+<p>If Python returns:</p>
+<pre><code class="language-json">{
+  &quot;message&quot;: &quot;Indexed&quot;,
+  &quot;stats&quot;: { &quot;files&quot;: 42, &quot;errors&quot;: 0 }
+}
+</code></pre>
+<p>Then your UI can read:</p>
+<pre><code class="language-erire">$result.message
+$result.stats.files
+$result.stats.errors
+</code></pre>
+<p>Design your Python responses for UI consumption:</p>
+<ul>
+<li><code>message</code> for a quick status line</li>
+<li><code>title</code> for a heading</li>
+<li><code>items</code> for content</li>
+<li><code>stats</code> for metrics</li>
+<li><code>error</code> for failures</li>
+</ul>
+<h2 id="9-keep-a-packaging-mindset-from-day-one">9. Keep A Packaging Mindset From Day One</h2>
+<p>If the final goal is a packaged <code>.exe</code>, build with packaging in mind:</p>
+<ul>
+<li>keep assets under <code>assets/</code></li>
+<li>keep helper scripts under <code>python/</code></li>
+<li>keep icons in <code>assets/brand/</code></li>
+<li>keep metadata in <code>app.json</code></li>
+</ul>
+<p>Current packager behavior already rewards this structure.</p>
+<p>If your app imports Python:</p>
+<ul>
+<li>install <code>PyInstaller</code></li>
+<li>make sure the bridge script follows the Erire CLI bridge contract</li>
+<li>keep helper dependencies explicit</li>
+</ul>
+<p>If your app needs native compiled code:</p>
+<ul>
+<li>place C++ sources under <code>cpp/</code></li>
+<li>let the packager compile and bundle the helper</li>
+</ul>
+<h2 id="10-prefer-studio-templates-for-team-scale-work">10. Prefer Studio Templates For Team-Scale Work</h2>
+<p>Erire Studio templates already encode good structure:</p>
+<ul>
+<li><code>default</code></li>
+<li><code>blank</code></li>
+<li><code>workspace</code></li>
+<li><code>python-tool</code></li>
+<li><code>showcase</code></li>
+</ul>
+<p>Good rule of thumb:</p>
+<ul>
+<li>use <code>blank</code> for tiny prototypes</li>
+<li>use <code>workspace</code> for internal tools and dashboards</li>
+<li>use <code>python-tool</code> when bridge logic is central</li>
+<li>use <code>showcase</code> for presentation/demo apps</li>
+</ul>
+<p>These templates are not just convenience; they are working guidance for how the project expects apps to grow.</p>
+<h2 id="11-a-good-real-world-blueprint">11. A Good Real-World Blueprint</h2>
+<p>Here is a solid architecture for a complete Erire app:</p>
+<h3 id="app-type">App Type</h3>
+<p>A local document or project workspace tool.</p>
+<h3 id="ui-layer">UI Layer</h3>
+<ul>
+<li>left navigation</li>
+<li>center workspace</li>
+<li>bottom status panel</li>
+<li>secondary settings page</li>
+</ul>
+<h3 id="native-erire-layer">Native Erire Layer</h3>
+<ul>
+<li>startup text</li>
+<li>basic counts and labels</li>
+<li>button click wiring</li>
+<li>page navigation</li>
+</ul>
+<h3 id="python-layer">Python Layer</h3>
+<ul>
+<li>project scanning</li>
+<li>reading/writing JSON</li>
+<li>asset indexing</li>
+<li>search helpers</li>
+<li>export/build helpers</li>
+</ul>
+<h3 id="packaging-layer">Packaging Layer</h3>
+<ul>
+<li><code>app.json</code></li>
+<li><code>assets/brand/app.ico</code></li>
+<li><code>python/app_bridge.py</code></li>
+<li>final build in <code>build/</code></li>
+</ul>
+<p>This is exactly the kind of app Erire is already good at.</p>
+<h2 id="12-design-rules-that-work-well-today">12. Design Rules That Work Well Today</h2>
+<ul>
+<li>Keep <code>main.er</code> readable enough to scan top-to-bottom.</li>
+<li>Prefer a small number of stable ids over random one-off ids.</li>
+<li>Use <code>card</code>, <code>panel</code>, and presets to build consistent visual sections.</li>
+<li>Put startup fetches inside <code>onLoad[...]</code>, not above the screen tree.</li>
+<li>Avoid gigantic event blocks; hand off work to Python quickly.</li>
+<li>Treat absolute layout like a design system, not a pile of magic numbers.</li>
+</ul>
+<h2 id="13-release-checklist">13. Release Checklist</h2>
+<p>Before packaging:</p>
+<ol>
+<li>Run <code>erire --check</code>.</li>
+<li>Verify every dynamic <code>screen.setText[...]</code> target exists.</li>
+<li>Verify every Python import path is correct.</li>
+<li>Verify <code>app.json</code> title/icon metadata.</li>
+<li>Verify assets live under <code>assets/</code>.</li>
+<li>Install <code>PyInstaller</code> if Python is used.</li>
+<li>Run <code>erire --build</code>.</li>
+<li>Launch the packaged <code>.exe</code> and verify the real packaged flow.</li>
+</ol>
+<h2 id="14-final-advice">14. Final Advice</h2>
+<p>The best complete Erire apps are not the ones that try to make Erire do everything. They are the ones that let Erire stay what it is best at:</p>
+<ul>
+<li>desktop UI</li>
+<li>explicit flows</li>
+<li>direct event wiring</li>
+<li>clean handoff to Python when the work stops being UI work</li>
+</ul>
+<p>That separation gives you a system that stays small, understandable, and shippable.</p>
+
+</article><article id="current-dev-log" class="doc-page hidden">
+<h1 id="erire-dev-log">Erire Dev Log</h1>
+<p>This dev log is a repository-based milestone log. It is not reconstructed from git history; it is based on the current codebase, shipped examples, templates, and supporting docs.</p>
+<h2 id="snapshot">Snapshot</h2>
+<ul>
+<li>Current CLI banner in <code>src/main.c</code> identifies the tool as <code>Erire 1.0.4</code>.</li>
+<li>The project currently includes the runtime, packager, examples, tests, and Erire Studio.</li>
+</ul>
+<h2 id="milestone-1-core-language-and-frontend-pipeline">Milestone 1: Core Language and Frontend Pipeline</h2>
+<p>The first visible milestone is the core frontend pipeline:</p>
+<ul>
+<li>lexer</li>
+<li>parser</li>
+<li>AST</li>
+<li>semantic analyzer</li>
+<li>runtime execution</li>
+</ul>
+<p>This established the basic Erire shape:</p>
+<ul>
+<li>chain-based element syntax</li>
+<li><code>screen.*</code> commands</li>
+<li><code>var.set[...]</code></li>
+<li>values, calls, variables, and conditions</li>
+</ul>
+<p>At this point, Erire already had a strong identity: it was not trying to be a general programming language. It was trying to be a UI-first desktop language.</p>
+<h2 id="milestone-2-native-desktop-ui-runtime">Milestone 2: Native Desktop UI Runtime</h2>
+<p>The runtime and UI layer evolved into a native desktop shell with these node families:</p>
+<ul>
+<li>text/label</li>
+<li>button</li>
+<li>input</li>
+<li>image</li>
+<li>webview</li>
+<li>box/card/panel</li>
+</ul>
+<p>This was the moment Erire stopped being just a parser experiment and became an actual desktop UI runtime.</p>
+<h2 id="milestone-3-source-order-runtime-event-model">Milestone 3: Source-Order Runtime + Event Model</h2>
+<p>The current runtime executes statements in strict source order. That decision shaped the whole framework:</p>
+<ul>
+<li>UI nodes exist immediately after <code>screen.add[...]</code></li>
+<li>variables mutate immediately</li>
+<li>events observe the state produced by earlier statements</li>
+<li><code>onLoad[...]</code> is deferred so initial hydration can happen after app creation</li>
+</ul>
+<p>This keeps the mental model simple and debuggable.</p>
+<h2 id="milestone-4-native-logic-layer-in-er">Milestone 4: Native Logic Layer in <code>.er</code></h2>
+<p>The addition of:</p>
+<ul>
+<li><code>if</code></li>
+<li><code>else.if</code></li>
+<li><code>else</code></li>
+<li><code>while</code></li>
+<li><code>for</code></li>
+<li>native <code>text.*</code>, <code>math.*</code>, <code>sys.*</code>, <code>time.now[]</code></li>
+</ul>
+<p>gave Erire a real &quot;backend inside the UI language&quot; story for lightweight logic.</p>
+<p>That change matters because not every app needs Python for basic control flow and derived values.</p>
+<h2 id="milestone-5-automatic-backend-er">Milestone 5: Automatic <code>backend.er</code></h2>
+<p>The frontend loader now automatically merges <code>backend.er</code> before the entry module when both live in the same project area.</p>
+<p>This created a practical split:</p>
+<ul>
+<li><code>backend.er</code>: setup, derived values, native control flow</li>
+<li><code>main.er</code>: screen creation and UI composition</li>
+</ul>
+<p>That simple convention is one of the most useful design decisions in the current codebase.</p>
+<h2 id="milestone-6-python-bridge-and-structured-results">Milestone 6: Python Bridge and Structured Results</h2>
+<p>The Python bridge turned Erire into a much more capable app platform.</p>
+<p>Key effects:</p>
+<ul>
+<li><code>import python &quot;...py&quot; as alias</code></li>
+<li><code>py.call[&quot;alias.function&quot;; ...]</code></li>
+<li>JSON-encoded argument passing</li>
+<li>structured JSON responses mapped into dotted runtime variables</li>
+</ul>
+<p>This is the milestone that made file tools, dashboards, automation apps, and bridge-driven workflows practical.</p>
+<h2 id="milestone-7-packaging-and-app-distribution">Milestone 7: Packaging and App Distribution</h2>
+<p>The packager moved Erire from &quot;run scripts locally&quot; to &quot;ship desktop apps&quot;.</p>
+<p>Current packaging behavior includes:</p>
+<ul>
+<li>bundling the entry app and <code>backend.er</code></li>
+<li>bundling <code>assets/</code>, <code>python/</code>, and <code>app.json</code></li>
+<li>compiling Python helpers with <code>PyInstaller</code> when needed</li>
+<li>optionally compiling native helpers from <code>cpp/</code></li>
+<li>applying icons to the output <code>.exe</code></li>
+<li>appending the payload to <code>ErireRunner.exe</code></li>
+</ul>
+<p>This is the milestone that made Erire an application workflow rather than just a runtime.</p>
+<h2 id="milestone-8-ui-depth-features">Milestone 8: UI Depth Features</h2>
+<p>The runtime continued to add the kinds of features real desktop apps need:</p>
+<ul>
+<li>WebView controls and browser commands</li>
+<li>image nodes and window branding</li>
+<li>multiline and read-only inputs</li>
+<li>custom-drawn presets</li>
+<li>pages via <code>page[...]</code> + <code>screen.show[...]</code></li>
+<li>animations</li>
+<li>console profile launching</li>
+</ul>
+<p>This phase is where the examples began to look like tools and dashboards instead of toy demos.</p>
+<h2 id="milestone-9-erire-studio">Milestone 9: Erire Studio</h2>
+<p>Erire Studio is a major shift in the project:</p>
+<ul>
+<li>dedicated project workflow</li>
+<li>structured templates</li>
+<li>file tree, editor, outline, logs</li>
+<li>run/check/build integration</li>
+<li>Python workflow awareness</li>
+</ul>
+<p>Studio changes the developer story from &quot;edit <code>.er</code> files manually&quot; to &quot;build complete projects inside a purpose-built environment&quot;.</p>
+<h2 id="milestone-10-design-work-for-vnext">Milestone 10: Design Work for vNext</h2>
+<p>The roadmap docs show a clear next direction:</p>
+<ul>
+<li>layout primitives</li>
+<li>reusable components</li>
+<li>reactive state</li>
+<li>stronger styling/theming</li>
+<li>richer project structure</li>
+</ul>
+<p>These ideas live today in <code>docs/erire-next-language.md</code>. They are important because they explain where the current system wants to go without pretending those features already exist.</p>
+<h2 id="what-the-current-repo-says-about-erire">What The Current Repo Says About Erire</h2>
+<p>The codebase tells a consistent story:</p>
+<ul>
+<li>Erire wants to stay small and direct.</li>
+<li>It wants desktop UI to be the center of the model.</li>
+<li>It treats Python as a powerful companion layer, not as an implementation accident.</li>
+<li>It prefers convention and explicitness over magic.</li>
+<li>It is already beyond &quot;toy DSL&quot; territory, but it is still intentionally narrow enough to stay understandable.</li>
+</ul>
+<h2 id="recommended-next-reading">Recommended Next Reading</h2>
+<ul>
+<li><a href="current-language-reference.md">Current Language Reference</a></li>
+<li><a href="building-full-apps-with-erire.md">Building Full Apps with Erire</a></li>
+<li><a href="erire-next-language.md">Erire Next Language Design</a></li>
+</ul>
+
+</article><article id="current-multiline-inputs" class="doc-page hidden">
+<h1 id="multiline-and-read-only-inputs">Multiline And Read-Only Inputs</h1>
+<p><code>Erire Bytecode Studio</code> needed two UI capabilities that were missing from the runtime:</p>
+<ul>
+<li>pasting and editing multiple lines of text</li>
+<li>showing long generated output without letting the user modify it</li>
+</ul>
+<p>To support that cleanly inside Erire itself, the runtime now supports these <code>input</code> properties:</p>
+<ul>
+<li><code>input.multiline[&quot;true&quot;]</code></li>
+<li><code>input.readonly[&quot;true&quot;]</code></li>
+<li><code>input.readOnly[&quot;true&quot;]</code></li>
+</ul>
+<h2 id="why-this-was-added">Why This Was Added</h2>
+<p>Erire already had <code>input</code>, but it was effectively a single-line field. That made it awkward to build:</p>
+<ul>
+<li>text editors</li>
+<li>byte/hex viewers</li>
+<li>log panes</li>
+<li>reverse-decoding tools</li>
+<li>settings areas with larger text blocks</li>
+</ul>
+<p>Adding multiline and read-only behavior strengthens Erire as a desktop UI language instead of pushing that work into external tooling.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="language-erire">screen.add[
+    input.value[&quot;Line 1\nLine 2&quot;]
+        .multiline[&quot;true&quot;]
+        .x[40]
+        .y[80]
+        .w[420]
+        .h[180]
+]
+
+screen.add[
+    input.value[&quot;Generated output&quot;]
+        .multiline[&quot;true&quot;]
+        .readonly[&quot;true&quot;]
+        .x[40]
+        .y[280]
+        .w[420]
+        .h[180]
+]
+</code></pre>
+<h2 id="runtime-behavior">Runtime Behavior</h2>
+<ul>
+<li>multiline inputs use a real multiline Windows <code>EDIT</code> control</li>
+<li><code>Enter</code> inserts a new line</li>
+<li>vertical scrolling is enabled automatically</li>
+<li>read-only inputs remain selectable and copyable while blocking edits</li>
+<li>larger default heights are applied when <code>multiline</code> is enabled</li>
+</ul>
+<h2 id="where-it-was-implemented">Where It Was Implemented</h2>
+<ul>
+<li>runtime property parsing: <code>src/runtime.c</code></li>
+<li>semantic validation: <code>src/semantic.c</code></li>
+<li>node spec / state: <code>src/ui.h</code></li>
+<li>Win32 input creation and layout: <code>src/ui.c</code></li>
+</ul>
+
+</article><article id="tutorial-tutorial-1-first-window" class="doc-page hidden">
+<h1 id="tutorial-1-your-first-window">Tutorial 1: Your First Window</h1>
+<p>This tutorial builds the smallest useful Erire app and explains the core syntax you will use every day.</p>
+<h2 id="goal">Goal</h2>
+<p>We will create a window with:</p>
+<ul>
+<li>a title</li>
+<li>a background color</li>
+<li>one text node</li>
+<li>one button</li>
+<li>one click event that updates the text</li>
+</ul>
+<h2 id="step-1-create-hello-er">Step 1: Create <code>hello.er</code></h2>
+<pre><code class="language-erire">screen.create[app; size; 100; 100; 820; 520]
+screen.title[&quot;Erire Hello&quot;]
+screen.bg[&quot;#182028&quot;]
+
+screen.add[text.value[&quot;Hello from Erire&quot;].id[&quot;headline&quot;].x[30].y[30].w[360].h[40].size[26].color[&quot;#ffffff&quot;]]
+screen.add[button.text[&quot;Click Me&quot;].x[30].y[90].w[180].h[48].onClick[
+    screen.setText[&quot;headline&quot;; &quot;Button clicked&quot;]
+]]
+</code></pre>
+<h2 id="step-2-run-validation">Step 2: Run Validation</h2>
+<pre><code class="language-powershell">.\erire.exe --check hello.er
+</code></pre>
+<p>Use <code>--check</code> constantly. It catches parser and semantic errors without opening the UI.</p>
+<h2 id="step-3-run-the-app">Step 3: Run The App</h2>
+<pre><code class="language-powershell">.\erire.exe hello.er
+</code></pre>
+<h2 id="what-each-line-does">What Each Line Does</h2>
+<h3 id="screen-create"><code>screen.create[...]</code></h3>
+<p>Creates the window. In current examples, the six-argument form is the common style:</p>
+<pre><code class="language-erire">screen.create[app; size; 100; 100; 820; 520]
+</code></pre>
+<p>Only the last four values matter to placement and size here:</p>
+<ul>
+<li><code>100</code>, <code>100</code>: initial window position</li>
+<li><code>820</code>, <code>520</code>: initial window size</li>
+</ul>
+<h3 id="screen-title"><code>screen.title[...]</code></h3>
+<p>Sets the window caption.</p>
+<h3 id="screen-bg"><code>screen.bg[...]</code></h3>
+<p>Sets the window background color.</p>
+<h3 id="screen-add"><code>screen.add[...]</code></h3>
+<p>Adds one UI element.</p>
+<p>This element:</p>
+<pre><code class="language-erire">text.value[&quot;Hello from Erire&quot;].id[&quot;headline&quot;].x[30].y[30].w[360].h[40].size[26].color[&quot;#ffffff&quot;]
+</code></pre>
+<p>means:</p>
+<ul>
+<li>create a <code>text</code> node</li>
+<li>set its text to <code>&quot;Hello from Erire&quot;</code></li>
+<li>give it id <code>headline</code></li>
+<li>place it at <code>(30, 30)</code></li>
+<li>size it to <code>(360, 40)</code></li>
+<li>draw it with font size <code>26</code></li>
+<li>draw it in white</li>
+</ul>
+<h3 id="onclick"><code>onClick[...]</code></h3>
+<p>The button event block runs when the user clicks the button.</p>
+<pre><code class="language-erire">screen.setText[&quot;headline&quot;; &quot;Button clicked&quot;]
+</code></pre>
+<p>That line finds the node whose id is <code>headline</code> and updates its content.</p>
+<h2 id="core-pattern-to-remember">Core Pattern To Remember</h2>
+<p>Most Erire apps start with this pattern:</p>
+<ol>
+<li>Create the window.</li>
+<li>Add nodes.</li>
+<li>Give important nodes ids.</li>
+<li>Update those ids inside events.</li>
+</ol>
+<h2 id="try-two-small-upgrades">Try Two Small Upgrades</h2>
+<h3 id="upgrade-a-add-a-status-line">Upgrade A: Add A Status Line</h3>
+<pre><code class="language-erire">screen.add[text.value[&quot;Status: waiting&quot;].id[&quot;status&quot;].x[30].y[160].w[300].h[24].size[14].color[&quot;#9fb0c8&quot;]]
+</code></pre>
+<p>Then change the event:</p>
+<pre><code class="language-erire">screen.add[button.text[&quot;Click Me&quot;].x[30].y[90].w[180].h[48].onClick[
+    screen.setText[&quot;headline&quot;; &quot;Button clicked&quot;]
+    screen.setText[&quot;status&quot;; &quot;Status: click received&quot;]
+]]
+</code></pre>
+<h3 id="upgrade-b-style-the-button">Upgrade B: Style The Button</h3>
+<pre><code class="language-erire">screen.add[button.text[&quot;Click Me&quot;].preset[&quot;primary&quot;].x[30].y[90].w[180].h[48].radius[14]]
+</code></pre>
+<h2 id="what-you-learned">What You Learned</h2>
+<ul>
+<li>window creation</li>
+<li>text nodes</li>
+<li>button nodes</li>
+<li>ids</li>
+<li>click events</li>
+<li><code>screen.setText[...]</code></li>
+</ul>
+<p>Next: <a href="02-forms-events-and-bindings.md">Tutorial 2: Forms, Events, and Bindings</a></p>
+
+</article><article id="tutorial-tutorial-2-forms-events-bindings" class="doc-page hidden">
+<h1 id="tutorial-2-forms-events-and-bindings">Tutorial 2: Forms, Events, and Bindings</h1>
+<p>This tutorial moves from a static button demo to a real interactive form.</p>
+<h2 id="goal">Goal</h2>
+<p>We will build:</p>
+<ul>
+<li>a note input</li>
+<li>a live preview</li>
+<li>a multiline output box</li>
+<li>a read-only log/status area</li>
+</ul>
+<h2 id="the-app">The App</h2>
+<pre><code class="language-erire">screen.create[app; size; 120; 100; 980; 680]
+screen.title[&quot;Erire Form Demo&quot;]
+screen.bg[&quot;#0f172a&quot;]
+
+screen.add[text.value[&quot;Notes&quot;].x[36].y[28].w[220].h[34].size[28].color[&quot;#f8fafc&quot;]]
+screen.add[text.value[&quot;Type in the input below. The bound variable updates before onChange runs.&quot;].x[36].y[70].w[620].h[22].size[14].color[&quot;#94a3b8&quot;]]
+
+screen.add[input.value[&quot;Hello from Erire&quot;].placeholder[&quot;Write a short note&quot;].bind[&quot;note_text&quot;].id[&quot;noteInput&quot;].x[36].y[122].w[420].h[48].padding[12].radius[14].bg[&quot;#111827&quot;].borderColor[&quot;#334155&quot;].color[&quot;#f8fafc&quot;].onChange[
+    screen.setText[&quot;livePreview&quot;; $note_text]
+    screen.setText[&quot;status&quot;; &quot;Input changed&quot;]
+]]
+
+screen.add[text.value[&quot;Live Preview&quot;].x[36].y[208].w[220].h[22].size[16].color[&quot;#7dd3fc&quot;]]
+screen.add[text.value[&quot;Hello from Erire&quot;].id[&quot;livePreview&quot;].x[36].y[238].w[420].h[48].size[18].color[&quot;#e5e7eb&quot;]]
+
+screen.add[text.value[&quot;Multiline Output&quot;].x[500].y[118].w[220].h[22].size[16].color[&quot;#7dd3fc&quot;]]
+screen.add[input.value[&quot;Line 1\nLine 2&quot;].id[&quot;outputBox&quot;].multiline[&quot;true&quot;].readonly[&quot;true&quot;].x[500].y[148].w[420].h[220].padding[12].radius[14].bg[&quot;#111827&quot;].borderColor[&quot;#334155&quot;].color[&quot;#e5e7eb&quot;]]
+
+screen.add[button.text[&quot;Copy Preview To Output&quot;].x[36].y[320].w[220].h[46].bg[&quot;#2563eb&quot;].radius[14].onClick[
+    screen.setText[&quot;outputBox&quot;; $note_text]
+    screen.setText[&quot;status&quot;; &quot;Preview copied to output&quot;]
+]]
+
+screen.add[panel.text[&quot;&quot;].x[36].y[596].w[884].h[44].bg[&quot;#111827&quot;].borderColor[&quot;#223245&quot;].radius[14]]
+screen.add[text.value[&quot;Ready&quot;].id[&quot;status&quot;].x[52].y[608].w[840].h[20].size[14].color[&quot;#94a3b8&quot;]]
+</code></pre>
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="bind"><code>bind[...]</code></h3>
+<p>This line:</p>
+<pre><code class="language-erire">input.bind[&quot;note_text&quot;]
+</code></pre>
+<p>means the input pushes its current text into the variable <code>$note_text</code>.</p>
+<p>In the current runtime:</p>
+<ul>
+<li>the initial input value is copied into <code>$note_text</code></li>
+<li>every later change updates <code>$note_text</code></li>
+<li>if <code>onChange[...]</code> exists, the bound variable is updated before the event body runs</li>
+</ul>
+<h3 id="onchange"><code>onChange[...]</code></h3>
+<pre><code class="language-erire">onChange[
+    screen.setText[&quot;livePreview&quot;; $note_text]
+]
+</code></pre>
+<p>This gives you instant UI feedback without needing Python or extra state machinery.</p>
+<h3 id="multiline-quot-true-quot"><code>multiline[&quot;true&quot;]</code></h3>
+<p>Turns the input into a multiline text area.</p>
+<h3 id="readonly-quot-true-quot"><code>readonly[&quot;true&quot;]</code></h3>
+<p>Keeps the field selectable and copyable, but blocks editing.</p>
+<p>This is ideal for:</p>
+<ul>
+<li>generated output</li>
+<li>logs</li>
+<li>previews</li>
+<li>read-only content panes</li>
+</ul>
+<h2 id="why-this-matters">Why This Matters</h2>
+<p>Bindings and <code>onChange[...]</code> are the fastest way to make Erire feel alive.</p>
+<p>Use them for:</p>
+<ul>
+<li>search boxes</li>
+<li>filters</li>
+<li>settings forms</li>
+<li>live previews</li>
+<li>editor-like tools</li>
+</ul>
+<h2 id="a-good-practical-rule">A Good Practical Rule</h2>
+<p>Use the input itself for authoring, and a read-only multiline input for output. That pattern maps well to:</p>
+<ul>
+<li>code generators</li>
+<li>note tools</li>
+<li>JSON formatters</li>
+<li>prompt tools</li>
+<li>admin utilities</li>
+</ul>
+<h2 id="small-exercises">Small Exercises</h2>
+<h3 id="exercise-a-add-a-clear-button">Exercise A: Add A Clear Button</h3>
+<p>Add:</p>
+<pre><code class="language-erire">screen.add[button.text[&quot;Clear&quot;].x[272].y[320].w[120].h[46].bg[&quot;#475569&quot;].radius[14].onClick[
+    screen.setText[&quot;noteInput&quot;; &quot;&quot;]
+    screen.setText[&quot;livePreview&quot;; &quot;&quot;]
+    screen.setText[&quot;status&quot;; &quot;Cleared&quot;]
+]]
+</code></pre>
+<h3 id="exercise-b-start-with-a-multiline-editor">Exercise B: Start With A Multiline Editor</h3>
+<p>Change the main input to:</p>
+<pre><code class="language-erire">.multiline[&quot;true&quot;].h[180]
+</code></pre>
+<h2 id="what-you-learned">What You Learned</h2>
+<ul>
+<li><code>input.bind[...]</code></li>
+<li><code>onChange[...]</code></li>
+<li>multiline input</li>
+<li>read-only input</li>
+<li>using ids to move data between controls</li>
+</ul>
+<p>Next: <a href="03-pages-navigation-and-webview.md">Tutorial 3: Pages, Navigation, and WebView</a></p>
+
+</article><article id="tutorial-tutorial-3-pages-navigation-webview" class="doc-page hidden">
+<h1 id="tutorial-3-pages-navigation-and-webview">Tutorial 3: Pages, Navigation, and WebView</h1>
+<p>This tutorial shows how to structure a multi-page desktop UI and how to use the embedded browser support.</p>
+<h2 id="goal">Goal</h2>
+<p>We will build:</p>
+<ul>
+<li>a <code>home</code> page</li>
+<li>a <code>docs</code> page</li>
+<li>navigation buttons</li>
+<li>a URL field</li>
+<li>a webview that can change pages</li>
+</ul>
+<h2 id="the-app">The App</h2>
+<pre><code class="language-erire">screen.create[app; size; 90; 80; 1240; 760]
+screen.title[&quot;Erire Docs Shell&quot;]
+screen.bg[&quot;#0b1220&quot;]
+screen.show[&quot;home&quot;]
+
+screen.add[text.value[&quot;Erire Docs Shell&quot;].page[&quot;home&quot;].x[40].y[34].w[360].h[34].size[28].color[&quot;#f8fafc&quot;]]
+screen.add[text.value[&quot;A two-page app: overview on one page, embedded docs on the other.&quot;].page[&quot;home&quot;].x[40].y[76].w[520].h[24].size[14].color[&quot;#94a3b8&quot;]]
+screen.add[button.text[&quot;Open Docs&quot;].page[&quot;home&quot;].x[40].y[128].w[160].h[46].bg[&quot;#2563eb&quot;].radius[14].onClick[
+    screen.show[&quot;docs&quot;]
+]]
+screen.add[card.text[&quot;Use pages to separate tasks cleanly.\n\nKeep overview UI on one page and browser-heavy content on another.&quot;].page[&quot;home&quot;].x[40].y[210].w[420].h[180].padding[18].radius[20].bg[&quot;#111827&quot;].borderColor[&quot;#243244&quot;].color[&quot;#e5e7eb&quot;]]
+
+screen.add[text.value[&quot;Documentation Browser&quot;].page[&quot;docs&quot;].x[24].y[24].w[360].h[34].size[28].color[&quot;#f8fafc&quot;]]
+screen.add[input.value[&quot;https://www.example.com&quot;].bind[&quot;target_url&quot;].id[&quot;urlBar&quot;].page[&quot;docs&quot;].x[24].y[74].w[860].h[44].padding[12].radius[14].bg[&quot;#111827&quot;].borderColor[&quot;#334155&quot;].color[&quot;#f8fafc&quot;].onChange[
+    screen.setText[&quot;status&quot;; $target_url]
+]]
+screen.add[button.text[&quot;Go&quot;].page[&quot;docs&quot;].x[900].y[74].w[84].h[44].bg[&quot;#15803d&quot;].radius[14].onClick[
+    webview.open[&quot;browser&quot;; $target_url]
+    screen.setText[&quot;status&quot;; $target_url]
+]]
+screen.add[button.text[&quot;Back&quot;].page[&quot;docs&quot;].x[996].y[74].w[84].h[44].bg[&quot;#475569&quot;].radius[14].onClick[
+    webview.back[&quot;browser&quot;]
+]]
+screen.add[button.text[&quot;Reload&quot;].page[&quot;docs&quot;].x[1092].y[74].w[100].h[44].bg[&quot;#1d4ed8&quot;].radius[14].onClick[
+    webview.reload[&quot;browser&quot;]
+]]
+screen.add[button.text[&quot;Home&quot;].page[&quot;docs&quot;].x[24].y[132].w[100].h[42].bg[&quot;#334155&quot;].radius[14].onClick[
+    screen.show[&quot;home&quot;]
+]]
+
+screen.add[webview.url[&quot;https://www.example.com&quot;].id[&quot;browser&quot;].page[&quot;docs&quot;].x[24].y[190].w[1168].h[500].radius[18].border[1].bg[&quot;#ffffff&quot;].borderColor[&quot;#dbe4ee&quot;].shadow[12]]
+
+screen.add[panel.text[&quot;&quot;].page[&quot;docs&quot;].x[24].y[704].w[1168].h[32].bg[&quot;#111827&quot;].borderColor[&quot;#243244&quot;].radius[12]]
+screen.add[text.value[&quot;Ready&quot;].id[&quot;status&quot;].page[&quot;docs&quot;].x[40].y[711].w[1100].h[18].size[13].color[&quot;#94a3b8&quot;]]
+</code></pre>
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="page"><code>page[...]</code></h3>
+<p>Every node can be assigned to a named page:</p>
+<pre><code class="language-erire">.page[&quot;home&quot;]
+.page[&quot;docs&quot;]
+</code></pre>
+<p>Only the active page is shown.</p>
+<h3 id="screen-show"><code>screen.show[...]</code></h3>
+<p>Switches the visible page:</p>
+<pre><code class="language-erire">screen.show[&quot;docs&quot;]
+</code></pre>
+<p>This is the simplest clean way to build multi-screen apps in current Erire.</p>
+<p>The current runtime starts on page <code>main</code>, so this tutorial explicitly switches to <code>home</code> at startup.</p>
+<h3 id="webview-url"><code>webview.url[...]</code></h3>
+<p>Creates the embedded browser node:</p>
+<pre><code class="language-erire">webview.url[&quot;https://www.example.com&quot;].id[&quot;browser&quot;]
+</code></pre>
+<p>The <code>id</code> matters because later commands target the webview by id.</p>
+<h3 id="webview-commands">WebView Commands</h3>
+<p>The current runtime supports:</p>
+<pre><code class="language-erire">webview.open[&quot;browser&quot;; &quot;https://example.com&quot;]
+webview.back[&quot;browser&quot;]
+webview.forward[&quot;browser&quot;]
+webview.reload[&quot;browser&quot;]
+webview.runJS[&quot;browser&quot;; &quot;document.title='Modified'&quot;]
+</code></pre>
+<h2 id="a-useful-trick">A Useful Trick</h2>
+<p>You can also navigate the webview by changing its text through <code>screen.setText[...]</code> because the runtime treats webview text as the current URL.</p>
+<p>Still, <code>webview.open[...]</code> is the clearer and more direct command for browser navigation.</p>
+<h2 id="design-guidance">Design Guidance</h2>
+<p>Use pages when:</p>
+<ul>
+<li>you have separate workflows</li>
+<li>one page is a dashboard and another is a tool</li>
+<li>the app would become crowded as one screen</li>
+</ul>
+<p>Use a webview when:</p>
+<ul>
+<li>you need live web content</li>
+<li>you want an internal browser shell</li>
+<li>you want to embed a docs/help surface</li>
+<li>you want hybrid desktop + web content</li>
+</ul>
+<h2 id="small-exercises">Small Exercises</h2>
+<h3 id="exercise-a-add-a-help-page">Exercise A: Add A <code>Help</code> Page</h3>
+<p>Create a third page with:</p>
+<ul>
+<li>app version</li>
+<li>keyboard hints</li>
+<li>packaging instructions</li>
+</ul>
+<h3 id="exercise-b-add-run-js">Exercise B: Add <code>Run JS</code></h3>
+<p>Add:</p>
+<pre><code class="language-erire">screen.add[button.text[&quot;Run JS&quot;].page[&quot;docs&quot;].x[1100].y[132].w[92].h[42].bg[&quot;#7c3aed&quot;].radius[14].onClick[
+    webview.runJS[&quot;browser&quot;; &quot;document.body.style.background='#f8fafc'; document.title='Injected from Erire';&quot;]
+    screen.setText[&quot;status&quot;; &quot;JavaScript injected&quot;]
+]]
+</code></pre>
+<h2 id="what-you-learned">What You Learned</h2>
+<ul>
+<li>page-based navigation</li>
+<li><code>screen.show[...]</code></li>
+<li>embedded webview usage</li>
+<li>webview browser commands</li>
+</ul>
+<p>Next: <a href="04-python-bridge.md">Tutorial 4: Python Bridge</a></p>
+
+</article><article id="tutorial-tutorial-4-python-bridge" class="doc-page hidden">
+<h1 id="tutorial-4-python-bridge">Tutorial 4: Python Bridge</h1>
+<p>This tutorial covers the most important integration point in Erire: building a Python bridge that Erire can call safely and repeatedly.</p>
+<h2 id="goal">Goal</h2>
+<p>We will build:</p>
+<ul>
+<li>an Erire UI</li>
+<li>a Python bridge script</li>
+<li>a <code>ping</code> action</li>
+<li>a <code>make_summary</code> action</li>
+<li>structured result data returned from Python</li>
+</ul>
+<h2 id="project-shape">Project Shape</h2>
+<pre><code class="language-text">BridgeDemo/
+  app.json
+  src/
+    main.er
+  python/
+    app_bridge.py
+</code></pre>
+<h2 id="step-1-create-src-main-er">Step 1: Create <code>src/main.er</code></h2>
+<pre><code class="language-erire">import python &quot;../python/app_bridge.py&quot; as app
+
+screen.create[app; size; 120; 120; 1040; 680]
+screen.title[&quot;Erire Python Bridge Demo&quot;]
+screen.bg[&quot;#0f172a&quot;]
+
+screen.add[text.value[&quot;Python Bridge Demo&quot;].x[36].y[28].w[320].h[34].size[28].color[&quot;#f8fafc&quot;]]
+screen.add[text.value[&quot;Use Erire for the UI and Python for data or system work.&quot;].x[36].y[72].w[520].h[20].size[14].color[&quot;#94a3b8&quot;]]
+
+screen.add[input.value[&quot;Erire bridge&quot;].bind[&quot;project_name&quot;].id[&quot;projectInput&quot;].x[36].y[126].w[320].h[46].padding[12].radius[14].bg[&quot;#111827&quot;].borderColor[&quot;#334155&quot;].color[&quot;#f8fafc&quot;]]
+
+screen.add[button.text[&quot;Ping Python&quot;].x[36].y[196].w[160].h[44].bg[&quot;#2563eb&quot;].radius[14].onClick[
+    var.set[&quot;ping_result&quot;; py.call[&quot;app.ping&quot;]]
+    screen.setText[&quot;status&quot;; $ping_result.message]
+    screen.setText[&quot;rootView&quot;; $ping_result.root]
+]]
+
+screen.add[button.text[&quot;Make Summary&quot;].x[208].y[196].w[180].h[44].bg[&quot;#15803d&quot;].radius[14].onClick[
+    var.set[&quot;summary&quot;; py.call[&quot;app.make_summary&quot;; $project_name]]
+    screen.setText[&quot;status&quot;; $summary.message]
+    screen.setText[&quot;summaryTitle&quot;; $summary.title]
+    screen.setText[&quot;summaryBody&quot;; $summary.body]
+]]
+
+screen.add[text.value[&quot;Bridge root will appear here&quot;].id[&quot;rootView&quot;].x[36].y[272].w[760].h[22].size[14].color[&quot;#7dd3fc&quot;]]
+
+screen.add[card.text[&quot;&quot;].x[36].y[326].w[640].h[220].bg[&quot;#111827&quot;].borderColor[&quot;#243244&quot;].radius[20]]
+screen.add[text.value[&quot;Summary Title&quot;].id[&quot;summaryTitle&quot;].x[60].y[354].w[580].h[26].size[20].color[&quot;#f8fafc&quot;]]
+screen.add[text.value[&quot;Summary body will appear here.&quot;].id[&quot;summaryBody&quot;].x[60].y[394].w[580].h[90].size[15].color[&quot;#cbd5e1&quot;]]
+
+screen.add[panel.text[&quot;&quot;].x[36].y[590].w[968].h[40].bg[&quot;#111827&quot;].borderColor[&quot;#243244&quot;].radius[12]]
+screen.add[text.value[&quot;Ready&quot;].id[&quot;status&quot;].x[52].y[602].w[920].h[18].size[13].color[&quot;#94a3b8&quot;]]
+</code></pre>
+<h2 id="step-2-create-python-app-bridge-py">Step 2: Create <code>python/app_bridge.py</code></h2>
+<p>This script follows the bridge contract used by the current runtime.</p>
+<pre><code class="language-python">#!/usr/bin/env python3
+import argparse
+import base64
+import json
+from pathlib import Path
+from typing import Any
+
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+
+def _emit(payload: Any, exit_code: int = 0) -&gt; None:
+    print(json.dumps(payload, ensure_ascii=False))
+    raise SystemExit(exit_code)
+
+
+def _decode_args(encoded: str) -&gt; list[Any]:
+    if not encoded:
+        return []
+    decoded = base64.b64decode(encoded.encode(&quot;ascii&quot;)).decode(&quot;utf-8&quot;)
+    value = json.loads(decoded)
+    if not isinstance(value, list):
+        raise ValueError(&quot;Bridge arguments must decode to a JSON list&quot;)
+    return value
+
+
+def ping() -&gt; dict[str, Any]:
+    return {
+        &quot;message&quot;: &quot;Python bridge connected&quot;,
+        &quot;root&quot;: str(PROJECT_ROOT),
+    }
+
+
+def make_summary(name: Any = &quot;&quot;) -&gt; dict[str, Any]:
+    text = str(name).strip() or &quot;Unnamed Project&quot;
+    return {
+        &quot;message&quot;: &quot;Summary generated&quot;,
+        &quot;title&quot;: f&quot;Project: {text}&quot;,
+        &quot;body&quot;: f&quot;{text} is now flowing through the Erire &lt;-&gt; Python bridge.&quot;,
+    }
+
+
+ALLOWED_FUNCTIONS = {
+    &quot;ping&quot;: ping,
+    &quot;make_summary&quot;: make_summary,
+}
+
+
+def __erire_dispatch__(function_name: str, arguments: list[Any]) -&gt; Any:
+    handler = ALLOWED_FUNCTIONS.get(function_name)
+    if handler is None:
+        raise PermissionError(f&quot;Function '{function_name}' is not whitelisted&quot;)
+    return handler(*arguments)
+
+
+def main() -&gt; None:
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument(&quot;--erire-call&quot;, required=True)
+    parser.add_argument(&quot;--erire-args-b64&quot;, default=&quot;&quot;)
+    args = parser.parse_args()
+
+    try:
+        bridge_args = _decode_args(args.erire_args_b64)
+        result = __erire_dispatch__(args.erire_call, bridge_args)
+        _emit(result, 0)
+    except Exception as exc:
+        _emit({&quot;status&quot;: &quot;error&quot;, &quot;error&quot;: str(exc)}, 1)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<h2 id="why-the-script-looks-like-this">Why The Script Looks Like This</h2>
+<p>The current runtime does not import Python as a library. It launches the bridge script as a subprocess and passes:</p>
+<ul>
+<li><code>--erire-call &lt;function_name&gt;</code></li>
+<li><code>--erire-args-b64 &lt;base64(json_list)&gt;</code></li>
+</ul>
+<p>So the script must:</p>
+<ol>
+<li>parse those flags</li>
+<li>decode the argument list</li>
+<li>dispatch to a whitelisted function</li>
+<li>print a JSON result</li>
+</ol>
+<p>That is the contract.</p>
+<h2 id="step-3-run-the-app">Step 3: Run The App</h2>
+<pre><code class="language-powershell">.\erire.exe src\main.er
+</code></pre>
+<h2 id="structured-result-access">Structured Result Access</h2>
+<p>When Python returns:</p>
+<pre><code class="language-python">{
+    &quot;message&quot;: &quot;Summary generated&quot;,
+    &quot;title&quot;: &quot;Project: Erire bridge&quot;,
+    &quot;body&quot;: &quot;...&quot;
+}
+</code></pre>
+<p>Erire can access:</p>
+<pre><code class="language-erire">$summary.message
+$summary.title
+$summary.body
+</code></pre>
+<h2 id="good-patterns-for-real-apps">Good Patterns For Real Apps</h2>
+<p>Return dictionaries shaped for UI use:</p>
+<pre><code class="language-python">{
+    &quot;message&quot;: &quot;...&quot;,
+    &quot;title&quot;: &quot;...&quot;,
+    &quot;body&quot;: &quot;...&quot;,
+    &quot;stats&quot;: {
+        &quot;files&quot;: 42,
+        &quot;errors&quot;: 0
+    }
+}
+</code></pre>
+<p>Then your Erire UI can fill multiple outputs from one bridge call.</p>
+<h2 id="what-to-put-in-python">What To Put In Python</h2>
+<p>Move these jobs to Python early:</p>
+<ul>
+<li>reading and writing files</li>
+<li>JSON handling</li>
+<li>API requests</li>
+<li>search/indexing</li>
+<li>system information</li>
+<li>automation</li>
+</ul>
+<p>Keep these jobs in Erire:</p>
+<ul>
+<li>pages</li>
+<li>buttons</li>
+<li>inputs</li>
+<li>status text</li>
+<li>event wiring</li>
+</ul>
+<h2 id="packaging-note">Packaging Note</h2>
+<p>If your app imports Python and you package it with <code>erire --build</code>, the packager expects <code>PyInstaller</code> to be installed.</p>
+<p>Install it with:</p>
+<pre><code class="language-powershell">python -m pip install pyinstaller
+</code></pre>
+<h2 id="what-you-learned">What You Learned</h2>
+<ul>
+<li><code>import python ... as ...</code></li>
+<li><code>py.call[...]</code></li>
+<li>the current Python bridge protocol</li>
+<li>structured result mapping</li>
+<li>how to split UI work from backend work</li>
+</ul>
+<p>Next: <a href="05-build-and-package.md">Tutorial 5: Build and Package</a></p>
+
+</article><article id="tutorial-tutorial-5-build-package" class="doc-page hidden">
+<h1 id="tutorial-5-build-and-package">Tutorial 5: Build and Package</h1>
+<p>This tutorial explains how to go from a working <code>.er</code> app to a packaged Windows executable.</p>
+<h2 id="goal">Goal</h2>
+<p>We will cover:</p>
+<ul>
+<li><code>app.json</code></li>
+<li>running checks before packaging</li>
+<li>building an <code>.exe</code></li>
+<li>icons</li>
+<li>Python packaging requirements</li>
+<li>what the packager bundles</li>
+</ul>
+<h2 id="step-1-add-app-json">Step 1: Add <code>app.json</code></h2>
+<p>Create an <code>app.json</code> beside your project entry area.</p>
+<p>Example:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;Bridge Demo&quot;,
+  &quot;entry&quot;: &quot;src/main.er&quot;,
+  &quot;output&quot;: &quot;build/bridge_demo.exe&quot;,
+  &quot;icon&quot;: &quot;assets/brand/app.ico&quot;,
+  &quot;win_title&quot;: &quot;Bridge Demo&quot;,
+  &quot;win_icon&quot;: &quot;assets/brand/app.ico&quot;,
+  &quot;version&quot;: &quot;0.1.0&quot;
+}
+</code></pre>
+<p>Useful fields today:</p>
+<ul>
+<li><code>name</code></li>
+<li><code>entry</code></li>
+<li><code>output</code></li>
+<li><code>icon</code></li>
+<li><code>win_title</code></li>
+<li><code>win_icon</code></li>
+</ul>
+<p>Important current behavior:</p>
+<ul>
+<li>runtime and packaging metadata are read beside the entry <code>.er</code> file</li>
+<li>Studio project discovery uses a root project manifest</li>
+</ul>
+<p>If your real entry is <code>src/main.er</code>, keep this nuance in mind when deciding where the runtime-facing <code>app.json</code> should live.</p>
+<h2 id="step-2-validate-before-packaging">Step 2: Validate Before Packaging</h2>
+<p>Always run:</p>
+<pre><code class="language-powershell">.\erire.exe --check src\main.er
+</code></pre>
+<p>This catches syntax and semantic problems before the build pipeline does more work.</p>
+<h2 id="step-3-build-the-app">Step 3: Build The App</h2>
+<pre><code class="language-powershell">.\erire.exe --build src\main.er build\bridge_demo.exe
+</code></pre>
+<p>If you do not pass an output path, Erire writes to:</p>
+<pre><code class="language-text">dist\&lt;entry-name&gt;.exe
+</code></pre>
+<h2 id="step-4-override-icon-or-window-title-at-build-time">Step 4: Override Icon Or Window Title At Build Time</h2>
+<p>You can override packaging metadata from the CLI:</p>
+<pre><code class="language-powershell">.\erire.exe --build --icon=assets\brand\app.png --win_title=&quot;Bridge Demo&quot; src\main.er build\bridge_demo.exe
+</code></pre>
+<p>Current icon notes:</p>
+<ul>
+<li><code>.ico</code> and <code>.png</code> are supported</li>
+<li>PNG icons are converted through <code>tools/png_to_ico.py</code></li>
+</ul>
+<h2 id="what-the-packager-bundles">What The Packager Bundles</h2>
+<p>The current packager includes:</p>
+<ul>
+<li>the entry <code>.er</code> file</li>
+<li>auto-loaded <code>backend.er</code></li>
+<li>imported Python bridges</li>
+<li><code>assets/</code></li>
+<li><code>python/</code></li>
+<li><code>app.json</code></li>
+<li>optional compiled helper from <code>cpp/</code></li>
+</ul>
+<p>That means good project structure pays off immediately.</p>
+<h2 id="python-packaging-requirement">Python Packaging Requirement</h2>
+<p>If your app uses Python imports, packaging expects <code>PyInstaller</code>:</p>
+<pre><code class="language-powershell">python -m pip install pyinstaller
+</code></pre>
+<p>Without it, packaging a Python-backed app will fail.</p>
+<h2 id="c-helper-support">C++ Helper Support</h2>
+<p>If your project contains <code>cpp/</code> sources, the packager can compile them into:</p>
+<pre><code class="language-text">cpp\native_cpp.exe
+</code></pre>
+<p>This is optional, but it gives you a path for native helper workflows.</p>
+<h2 id="what-happens-at-runtime">What Happens At Runtime</h2>
+<p>The final executable is based on <code>ErireRunner.exe</code>.</p>
+<p>During packaging:</p>
+<ul>
+<li>the runner is copied</li>
+<li>the packaged app payload is appended to it</li>
+</ul>
+<p>During launch:</p>
+<ul>
+<li>the bundled payload is extracted to a temporary directory</li>
+<li>the entry app is then run from that extracted package area</li>
+</ul>
+<h2 id="a-safe-build-checklist">A Safe Build Checklist</h2>
+<p>Before shipping:</p>
+<ol>
+<li>Run <code>--check</code>.</li>
+<li>Launch the source app once.</li>
+<li>Confirm every imported Python file exists.</li>
+<li>Confirm <code>assets/</code> contains everything the UI expects.</li>
+<li>Confirm <code>app.json</code> title and icon metadata.</li>
+<li>Confirm <code>PyInstaller</code> is installed if Python is used.</li>
+<li>Build the <code>.exe</code>.</li>
+<li>Launch the packaged <code>.exe</code> and test the real packaged flow.</li>
+</ol>
+<h2 id="common-build-commands">Common Build Commands</h2>
+<h3 id="build-with-default-output">Build with default output</h3>
+<pre><code class="language-powershell">.\erire.exe --build src\main.er
+</code></pre>
+<h3 id="build-with-explicit-output">Build with explicit output</h3>
+<pre><code class="language-powershell">.\erire.exe --build src\main.er build\my_app.exe
+</code></pre>
+<h3 id="build-with-icon-override">Build with icon override</h3>
+<pre><code class="language-powershell">.\erire.exe --build --icon=assets\brand\app.ico src\main.er build\my_app.exe
+</code></pre>
+<h3 id="build-with-icon-and-window-title-override">Build with icon and window title override</h3>
+<pre><code class="language-powershell">.\erire.exe --build --icon=assets\brand\app.png --win_title=&quot;My App&quot; src\main.er build\my_app.exe
+</code></pre>
+<h2 id="final-advice">Final Advice</h2>
+<p>Packaging works best when the app is already organized like a product:</p>
+<ul>
+<li><code>src/</code></li>
+<li><code>assets/</code></li>
+<li><code>python/</code></li>
+<li><code>app.json</code></li>
+<li>stable ids</li>
+<li>stable bridge files</li>
+</ul>
+<p>If you want the design guidance behind that structure, continue with <a href="../building-full-apps-with-erire.md">Building Full Apps with Erire</a>.</p>
+
+</article><article id="studio-erire-studio-design" class="doc-page hidden">
+<h1 id="erire-studio-design">Erire Studio Design</h1>
+<h2 id="a-product-vision">A. Product Vision</h2>
+<p>Erire Studio is the dedicated professional IDE for Erire and its Python bridge ecosystem. It should feel closer to a focused product studio than to a generic code editor:</p>
+<ul>
+<li>purpose-built for Erire projects</li>
+<li>deeply aware of Python helpers, app packaging, and assets</li>
+<li>optimized for Windows desktop</li>
+<li>visually bright, calm, minimal, and premium</li>
+</ul>
+<p>It is not trying to compete with every general-purpose IDE. It is trying to be the fastest path from Erire idea to packaged desktop app.</p>
+<hr />
+<h2 id="b-full-feature-list">B. Full Feature List</h2>
+<h3 id="core-editing">Core Editing</h3>
+<ul>
+<li>multi-tab code editor</li>
+<li>Erire syntax services</li>
+<li>Python syntax services</li>
+<li>line numbers</li>
+<li>indentation and formatting hooks</li>
+<li>snippets</li>
+<li>quick insert templates</li>
+<li>hover info</li>
+<li>outline and symbols</li>
+</ul>
+<h3 id="project-workflow">Project Workflow</h3>
+<ul>
+<li>new project</li>
+<li>open project</li>
+<li>recent projects</li>
+<li>project templates</li>
+<li>project explorer</li>
+<li>search in project</li>
+<li>replace in project</li>
+<li>asset browser</li>
+</ul>
+<h3 id="build-run">Build + Run</h3>
+<ul>
+<li>run Erire app</li>
+<li>check/validate app</li>
+<li>build packaged <code>.exe</code></li>
+<li>configure build output</li>
+<li>track compiler logs</li>
+<li>track runtime logs</li>
+<li>build configurations</li>
+</ul>
+<h3 id="python-integration">Python Integration</h3>
+<ul>
+<li>edit Python bridge files</li>
+<li>configure interpreter</li>
+<li>run helper scripts</li>
+<li>capture Python errors</li>
+<li>map Python files to Erire project</li>
+</ul>
+<h3 id="productivity-tools">Productivity Tools</h3>
+<ul>
+<li>bottom terminal/logs/problems panels</li>
+<li>right inspector/outline/preview panel</li>
+<li>settings dialog</li>
+<li>status bar</li>
+<li>notifications/toasts</li>
+<li>command palette in later phases</li>
+</ul>
+<hr />
+<h2 id="c-ui-layout-specification">C. UI Layout Specification</h2>
+<h3 id="top-title-bar">Top Title Bar</h3>
+<ul>
+<li>app title: <code>Erire Studio</code></li>
+<li>current project name</li>
+<li>window controls</li>
+<li>subtle brand icon</li>
+</ul>
+<h3 id="menu-bar">Menu Bar</h3>
+<ul>
+<li>File</li>
+<li>Edit</li>
+<li>View</li>
+<li>Project</li>
+<li>Run</li>
+<li>Tools</li>
+<li>Settings</li>
+<li>Help</li>
+</ul>
+<h3 id="toolbar">Toolbar</h3>
+<ul>
+<li>New Project</li>
+<li>Open</li>
+<li>Save</li>
+<li>Run</li>
+<li>Build</li>
+<li>Check</li>
+<li>Settings</li>
+<li>Python Env</li>
+</ul>
+<h3 id="left-sidebar">Left Sidebar</h3>
+<ul>
+<li>Project tree</li>
+<li>Recent/open files</li>
+<li>search box</li>
+<li>template shortcuts</li>
+</ul>
+<h3 id="main-editor-area">Main Editor Area</h3>
+<ul>
+<li>tab strip</li>
+<li>one editor per file</li>
+<li>welcome tab when no file is open</li>
+<li>supports Erire and Python documents</li>
+</ul>
+<h3 id="right-sidebar">Right Sidebar</h3>
+<ul>
+<li>Outline</li>
+<li>Inspector</li>
+<li>Preview / details placeholder</li>
+</ul>
+<h3 id="bottom-panel">Bottom Panel</h3>
+<ul>
+<li>Output</li>
+<li>Terminal</li>
+<li>Problems</li>
+<li>Runtime Log</li>
+</ul>
+<h3 id="status-bar">Status Bar</h3>
+<ul>
+<li>active file</li>
+<li>cursor position</li>
+<li>syntax mode</li>
+<li>python interpreter</li>
+<li>Erire toolchain path</li>
+<li>build status</li>
+</ul>
+<hr />
+<h2 id="d-design-system">D. Design System</h2>
+<h3 id="visual-direction">Visual Direction</h3>
+<ul>
+<li>white/off-white shell</li>
+<li>light gray panel grouping</li>
+<li>thin cool-gray borders</li>
+<li>dark gray text</li>
+<li>restrained blue-gray accent</li>
+<li>soft shadows on floating panels only</li>
+<li>rounded corners on tool surfaces, not cartoonish bubbles</li>
+</ul>
+<h3 id="suggested-palette">Suggested Palette</h3>
+<ul>
+<li>window background: <code>#f4f6f8</code></li>
+<li>panel background: <code>#ffffff</code></li>
+<li>secondary panel: <code>#eef1f4</code></li>
+<li>border: <code>#d9dee5</code></li>
+<li>primary text: <code>#1f2937</code></li>
+<li>muted text: <code>#64748b</code></li>
+<li>accent: <code>#5b7cfa</code></li>
+<li>success: <code>#16a34a</code></li>
+<li>warning: <code>#d97706</code></li>
+<li>error: <code>#dc2626</code></li>
+</ul>
+<h3 id="typography">Typography</h3>
+<ul>
+<li>Segoe UI on Windows for shell UI</li>
+<li>Cascadia Code / Consolas for editors</li>
+</ul>
+<hr />
+<h2 id="e-architecture">E. Architecture</h2>
+<h3 id="1-shell-window-manager">1. Shell / Window Manager</h3>
+<ul>
+<li>creates the main desktop window</li>
+<li>owns menus, toolbars, split panels, status bar</li>
+<li>dispatches commands to editor, runner, project, and settings subsystems</li>
+</ul>
+<h3 id="2-editor-engine">2. Editor Engine</h3>
+<ul>
+<li>document model per tab</li>
+<li>language mode: Erire or Python</li>
+<li>dirty-state tracking</li>
+<li>file load/save</li>
+<li>later: token styling, diagnostics, completion</li>
+</ul>
+<h3 id="3-compiler-integration">3. Compiler Integration</h3>
+<ul>
+<li>invokes <code>erire.exe</code></li>
+<li>supports <code>run</code>, <code>check</code>, and <code>build</code></li>
+<li>routes output into bottom logs</li>
+<li>translates failures into problem list entries</li>
+</ul>
+<h3 id="4-python-integration">4. Python Integration</h3>
+<ul>
+<li>configured interpreter path</li>
+<li>run current <code>.py</code></li>
+<li>validate bridge scripts</li>
+<li>show Python runtime errors in output panel</li>
+</ul>
+<h3 id="5-project-system">5. Project System</h3>
+<ul>
+<li>detects <code>app.json</code></li>
+<li>loads folder tree</li>
+<li>opens files into tabs</li>
+<li>generates template projects</li>
+</ul>
+<h3 id="6-settings-system">6. Settings System</h3>
+<ul>
+<li>stores IDE configuration in <code>erire_studio.ini</code></li>
+<li>remembers compiler path, python path, font size, and last project</li>
+</ul>
+<h3 id="7-terminal-strategy">7. Terminal Strategy</h3>
+<ul>
+<li>MVP: command output runner panel plus external developer shell launcher</li>
+<li>v2: ConPTY-backed embedded terminal</li>
+</ul>
+<hr />
+<h2 id="f-recommended-source-structure">F. Recommended Source Structure</h2>
+<pre><code class="language-txt">studio/
+  main.c
+  app.c
+  app.h
+  settings.c
+  settings.h
+  runner.c
+  runner.h
+  project.c
+  project.h
+  templates.c
+  templates.h
+  theme.h
+resources/
+  erire_studio.rc
+docs/
+  erire-studio.md
+  erire-next-language.md
+</code></pre>
+<hr />
+<h2 id="g-desktop-app-implementation-plan">G. Desktop App Implementation Plan</h2>
+<ol>
+<li>Build the shell window and fixed IDE layout.</li>
+<li>Add multi-tab text editing.</li>
+<li>Add project tree loading and file open/save.</li>
+<li>Add build/run integration against <code>erire.exe</code>.</li>
+<li>Add Python interpreter configuration and command runner.</li>
+<li>Add problems/log panels.</li>
+<li>Add syntax services and completion.</li>
+<li>Add embedded preview and richer diagnostics.</li>
+</ol>
+<hr />
+<h2 id="h-example-screens">H. Example Screens</h2>
+<h3 id="welcome-screen">Welcome Screen</h3>
+<ul>
+<li>brand header</li>
+<li>recent projects list</li>
+<li>buttons for New Project / Open Project</li>
+<li>template cards</li>
+</ul>
+<h3 id="editor-screen">Editor Screen</h3>
+<ul>
+<li>full layout with left project tree, central tabs, right inspector, bottom output</li>
+</ul>
+<h3 id="settings-screen">Settings Screen</h3>
+<ul>
+<li>compiler path</li>
+<li>python path</li>
+<li>editor font</li>
+<li>font size</li>
+<li>autosave</li>
+</ul>
+<h3 id="build-run-view">Build / Run View</h3>
+<ul>
+<li>command log</li>
+<li>result status</li>
+<li>last build target</li>
+</ul>
+<h3 id="terminal-problems-view">Terminal / Problems View</h3>
+<ul>
+<li>tabbed bottom panel</li>
+<li>searchable output</li>
+<li>clickable error list</li>
+</ul>
+<hr />
+<h2 id="i-initial-code-generation-strategy">I. Initial Code Generation Strategy</h2>
+<p>The starter implementation should be a real Win32 desktop app in C with:</p>
+<ul>
+<li>main window shell</li>
+<li>menus and toolbar</li>
+<li>project tree</li>
+<li>tabbed editors</li>
+<li>bottom output tabs</li>
+<li>status bar</li>
+<li>settings persistence</li>
+<li>Erire runner integration</li>
+<li>Python runner integration</li>
+<li>template project creation</li>
+</ul>
+<p>This is an MVP IDE shell, not a finished editor engine. The code below is designed to be extensible rather than disposable.</p>
+<hr />
+<h2 id="mvp-recommendation">MVP Recommendation</h2>
+<p>Ship version 1 of Erire Studio with:</p>
+<ul>
+<li>project open/save/new</li>
+<li>multi-tab editing</li>
+<li>run/check/build</li>
+<li>output/problems panels</li>
+<li>python interpreter configuration</li>
+<li>project tree and recent project support</li>
+</ul>
+<hr />
+<h2 id="v2-roadmap">v2 Roadmap</h2>
+<ul>
+<li>syntax highlighting for Erire and Python</li>
+<li>completion engine</li>
+<li>formatter integration</li>
+<li>outline/symbol extraction</li>
+<li>embedded terminal using ConPTY</li>
+<li>preview panel</li>
+</ul>
+<hr />
+<h2 id="v3-roadmap">v3 Roadmap</h2>
+<ul>
+<li>visual layout inspector</li>
+<li>designer/live preview</li>
+<li>plugin system</li>
+<li>debugger integration</li>
+<li>performance timeline</li>
+<li>component/theme studio</li>
+</ul>
+<hr />
+<h2 id="why-erire-studio-is-ideal-for-erire">Why Erire Studio Is Ideal For Erire</h2>
+<ul>
+<li>It is tuned for the exact CLI, packaging model, and Python bridge that Erire already uses.</li>
+<li>It keeps the language and tooling in one native C codebase on Windows.</li>
+<li>It lowers the cost of working on Erire apps, Erire itself, and Python helpers in the same place.</li>
+</ul>
+
+</article><article id="design-erire-next-language-design" class="doc-page hidden">
+<h1 id="erire-next-language-design">Erire Next Language Design</h1>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>Erire vNext should stay a UI-only language, but move from an absolute-positioned &quot;screen script&quot; into a declarative, component-oriented UI language with:</p>
+<ul>
+<li>reusable components</li>
+<li>flexible layouts instead of raw <code>x/y</code> everywhere</li>
+<li>reactive state</li>
+<li>reusable styles and themes</li>
+<li>stronger event composition</li>
+<li>project-level imports and modular structure</li>
+<li>fast incremental rendering on top of the current C runtime</li>
+</ul>
+<p>The identity to preserve is:</p>
+<ul>
+<li>chain-based syntax</li>
+<li>readable bracket calls</li>
+<li>UI-first mental model</li>
+<li>simple integration with Python via <code>py.call</code></li>
+</ul>
+<p>The design below keeps existing syntax valid while introducing a cleaner &quot;vNext layer&quot; above it.</p>
+<hr />
+<h2 id="1-component-system">1. Component System</h2>
+<h3 id="concept">Concept</h3>
+<p>Components give Erire reusable UI building blocks without introducing classes or OOP. A component is a named UI template with props and optional local state.</p>
+<h3 id="syntax">Syntax</h3>
+<pre><code class="language-txt">component Card[title; value] [
+    box.preset[&quot;card&quot;]
+       .children[
+           text.value[$title].preset[&quot;cardTitle&quot;]
+           text.value[$value].preset[&quot;metric&quot;]
+       ]
+]
+</code></pre>
+<p>Component usage inside <code>screen.add</code> or another component:</p>
+<pre><code class="language-txt">screen.add[Card[&quot;CPU&quot;; &quot;37%&quot;]]
+</code></pre>
+<p>Named props for readability:</p>
+<pre><code class="language-txt">screen.add[Card.title[&quot;CPU&quot;].value[&quot;37%&quot;]]
+</code></pre>
+<h3 id="example-1">Example 1</h3>
+<pre><code class="language-txt">component MetricTile[label; number] [
+    card.style[&quot;metricCard&quot;]
+        .children[
+            text.value[$label].style[&quot;mutedLabel&quot;]
+            text.value[$number].style[&quot;heroMetric&quot;]
+        ]
+]
+
+screen.add[MetricTile[&quot;Memory&quot;; &quot;8.2 GB&quot;]]
+screen.add[MetricTile[&quot;Disk&quot;; &quot;72%&quot;]]
+</code></pre>
+<h3 id="example-2">Example 2</h3>
+<pre><code class="language-txt">component ToolbarButton[text; action] [
+    button.text[$text]
+          .style[&quot;toolbarBtn&quot;]
+          .onClick[
+              event.emit[$action]
+          ]
+]
+
+screen.add[ToolbarButton[&quot;Build&quot;; &quot;build.requested&quot;]]
+</code></pre>
+<h3 id="integration-with-existing-erire">Integration With Existing Erire</h3>
+<ul>
+<li><code>screen.add[...]</code> still stays the root composition point.</li>
+<li>Existing elements remain legal.</li>
+<li>A component expands into the same internal element tree the runtime already understands.</li>
+<li>Existing <code>preset</code> and event concepts become building blocks inside components.</li>
+</ul>
+<hr />
+<h2 id="2-layout-system">2. Layout System</h2>
+<h3 id="concept">Concept</h3>
+<p>Layout is the most important evolution. Erire should stop forcing every serious app to hand-place everything. The vNext layout model should provide <code>row</code>, <code>column</code>, <code>stack</code>, and <code>grid</code>, while still allowing absolute positioning when needed.</p>
+<h3 id="syntax">Syntax</h3>
+<pre><code class="language-txt">layout.column[
+    gap[12]
+    padding[20]
+    children[
+        text.value[&quot;Hello&quot;]
+        button.text[&quot;Click&quot;]
+    ]
+]
+</code></pre>
+<h3 id="core-layout-nodes">Core Layout Nodes</h3>
+<ul>
+<li><code>layout.row[...]</code></li>
+<li><code>layout.column[...]</code></li>
+<li><code>layout.stack[...]</code></li>
+<li><code>layout.grid[...]</code></li>
+<li><code>layout.scroll[...]</code></li>
+</ul>
+<h3 id="shared-layout-properties">Shared Layout Properties</h3>
+<ul>
+<li><code>gap[...]</code></li>
+<li><code>padding[...]</code></li>
+<li><code>align[start|center|end|stretch]</code></li>
+<li><code>justify[start|center|between|around|end]</code></li>
+<li><code>grow[...]</code></li>
+<li><code>basis[...]</code></li>
+<li><code>minW[...]</code>, <code>minH[...]</code></li>
+<li><code>maxW[...]</code>, <code>maxH[...]</code></li>
+<li><code>fillX[true|false]</code>, <code>fillY[true|false]</code></li>
+</ul>
+<h3 id="example-1">Example 1</h3>
+<pre><code class="language-txt">screen.add[
+    layout.column[
+        padding[24]
+        gap[16]
+        children[
+            text.value[&quot;System Dashboard&quot;].style[&quot;pageTitle&quot;]
+            layout.row[
+                gap[16]
+                children[
+                    MetricTile[&quot;CPU&quot;; $snapshot.cpu.usage_label]
+                    MetricTile[&quot;RAM&quot;; $snapshot.ram.used_label]
+                    MetricTile[&quot;Disk&quot;; $snapshot.disk.used_label]
+                ]
+            ]
+        ]
+    ]
+]
+</code></pre>
+<h3 id="example-2">Example 2</h3>
+<pre><code class="language-txt">screen.add[
+    layout.grid[
+        columns[2]
+        gap[18]
+        children[
+            card.children[
+                text.value[&quot;Project&quot;]
+                input.bind[&quot;projectName&quot;]
+            ]
+            card.children[
+                text.value[&quot;Python Path&quot;]
+                input.bind[&quot;pythonPath&quot;]
+            ]
+        ]
+    ]
+]
+</code></pre>
+<h3 id="integration-with-existing-erire">Integration With Existing Erire</h3>
+<ul>
+<li>Existing <code>.x/.y/.w/.h</code> remain valid for low-level placement or custom overlays.</li>
+<li>Layout nodes are just new element kinds in the parser/runtime.</li>
+<li>Child layout resolution runs before native control positioning.</li>
+<li>The runtime can still lower final layout to Win32 rectangles, so the rendering backend remains incremental, not a rewrite.</li>
+</ul>
+<hr />
+<h2 id="3-state-management">3. State Management</h2>
+<h3 id="concept">Concept</h3>
+<p>Reactive state lets the UI update automatically when values change, instead of manually calling <code>screen.setText</code> for every change.</p>
+<h3 id="syntax">Syntax</h3>
+<pre><code class="language-txt">state[&quot;count&quot;; 0]
+</code></pre>
+<p>State mutation:</p>
+<pre><code class="language-txt">state.set[&quot;count&quot;; $count + 1]
+</code></pre>
+<p>Derived state:</p>
+<pre><code class="language-txt">state.computed[&quot;summary&quot;; $firstName + &quot; &quot; + $lastName]
+</code></pre>
+<h3 id="example-1">Example 1</h3>
+<pre><code class="language-txt">state[&quot;count&quot;; 0]
+
+screen.add[
+    layout.column[
+        gap[10]
+        children[
+            text.value[&quot;Counter: &quot; + $count]
+            button.text[&quot;Increment&quot;].onClick[
+                state.set[&quot;count&quot;; $count + 1]
+            ]
+        ]
+    ]
+]
+</code></pre>
+<h3 id="example-2">Example 2</h3>
+<pre><code class="language-txt">state[&quot;search&quot;; &quot;&quot;]
+
+screen.add[
+    input.bind[&quot;search&quot;]
+         .placeholder[&quot;Search docs&quot;]
+]
+
+screen.add[
+    text.value[&quot;Searching for: &quot; + $search]
+]
+</code></pre>
+<h3 id="integration-with-existing-erire">Integration With Existing Erire</h3>
+<ul>
+<li><code>var.set</code> still exists for one-shot values and bridge results.</li>
+<li><code>state[...]</code> is for reactive UI values.</li>
+<li><code>input.bind[...]</code> becomes state-aware automatically.</li>
+<li><code>screen.setText</code> remains available for imperative escape hatches.</li>
+</ul>
+<hr />
+<h2 id="4-styling-system">4. Styling System</h2>
+<h3 id="concept">Concept</h3>
+<p>Presets were a good first step. vNext should formalize them into reusable styles and themes with inheritance.</p>
+<h3 id="syntax">Syntax</h3>
+<pre><code class="language-txt">style[&quot;primaryBtn&quot;;
+    bg:&quot;#2563eb&quot;;
+    color:&quot;#ffffff&quot;;
+    radius:12;
+    padding:14
+]
+</code></pre>
+<p>Theme definition:</p>
+<pre><code class="language-txt">theme[&quot;light&quot;;
+    bg:&quot;#f8fafc&quot;;
+    surface:&quot;#ffffff&quot;;
+    text:&quot;#111827&quot;;
+    muted:&quot;#64748b&quot;;
+    accent:&quot;#2563eb&quot;
+]
+</code></pre>
+<h3 id="example-1">Example 1</h3>
+<pre><code class="language-txt">style[&quot;sidebarItem&quot;;
+    padding:12;
+    radius:10;
+    color:&quot;#334155&quot;;
+    bg:&quot;#ffffff&quot;
+]
+
+screen.add[
+    button.text[&quot;Files&quot;].style[&quot;sidebarItem&quot;]
+]
+</code></pre>
+<h3 id="example-2">Example 2</h3>
+<pre><code class="language-txt">theme[&quot;dark&quot;;
+    bg:&quot;#0f172a&quot;;
+    surface:&quot;#111827&quot;;
+    text:&quot;#f8fafc&quot;;
+    muted:&quot;#94a3b8&quot;;
+    accent:&quot;#38bdf8&quot;
+]
+
+screen.theme[&quot;dark&quot;]
+</code></pre>
+<h3 id="integration-with-existing-erire">Integration With Existing Erire</h3>
+<ul>
+<li><code>preset</code> can stay as shorthand or alias for <code>style</code>.</li>
+<li>Existing <code>.bg/.color/.radius/.padding</code> remain override properties.</li>
+<li>Theme values can flow into the current custom-drawn runtime theme model.</li>
+</ul>
+<hr />
+<h2 id="5-advanced-events">5. Advanced Events</h2>
+<h3 id="concept">Concept</h3>
+<p>Erire already supports event blocks. vNext should make them composable and reactive without becoming a full scripting language.</p>
+<h3 id="syntax">Syntax</h3>
+<pre><code class="language-txt">button.text[&quot;Save&quot;].onClick[
+    if[$isValid][
+        state.set[&quot;saving&quot;; true]
+        py.call[&quot;api.save&quot;; $form]
+        event.emit[&quot;toast.success&quot;; &quot;Saved&quot;]
+    ]
+]
+</code></pre>
+<p>New event helpers:</p>
+<ul>
+<li><code>event.emit[...]</code></li>
+<li><code>event.listen[...]</code></li>
+<li><code>event.preventDefault[]</code></li>
+<li><code>event.stop[]</code></li>
+</ul>
+<h3 id="example-1">Example 1</h3>
+<pre><code class="language-txt">button.text[&quot;Run&quot;].onClick[
+    screen.show[&quot;output&quot;]
+    event.emit[&quot;build.run&quot;]
+]
+
+event.listen[&quot;build.run&quot;][
+    state.set[&quot;status&quot;; &quot;Running...&quot;]
+]
+</code></pre>
+<h3 id="example-2">Example 2</h3>
+<pre><code class="language-txt">input.bind[&quot;query&quot;].onChange[
+    if[$query != &quot;&quot;][
+        state.set[&quot;searching&quot;; true]
+        var.set[&quot;result&quot;; py.call[&quot;docs.search&quot;; $query]]
+        state.set[&quot;searching&quot;; false]
+    ]
+]
+</code></pre>
+<h3 id="integration-with-existing-erire">Integration With Existing Erire</h3>
+<ul>
+<li><code>onClick</code>, <code>onChange</code>, <code>onLoad</code> stay.</li>
+<li>Event blocks continue to accept multiple statements.</li>
+<li>Existing <code>if[...]</code> model stays the conditional primitive.</li>
+</ul>
+<hr />
+<h2 id="6-project-structure">6. Project Structure</h2>
+<h3 id="concept">Concept</h3>
+<p>Erire projects need a standard structure so the language scales beyond single-file apps.</p>
+<h3 id="recommended-structure">Recommended Structure</h3>
+<pre><code class="language-txt">MyApp/
+  app.json
+  src/
+    main.er
+    pages/
+      dashboard.er
+      settings.er
+    components/
+      metric_tile.er
+      sidebar.er
+    styles/
+      theme.er
+      buttons.er
+  assets/
+    images/
+    icons/
+  python/
+    app_bridge.py
+  build/
+</code></pre>
+<h3 id="syntax">Syntax</h3>
+<pre><code class="language-txt">import erire &quot;./components/metric_tile.er&quot; as MetricTile
+import erire &quot;./pages/dashboard.er&quot; as DashboardPage
+</code></pre>
+<h3 id="example-1">Example 1</h3>
+<pre><code class="language-txt">import erire &quot;./components/sidebar.er&quot; as Sidebar
+import erire &quot;./pages/home.er&quot; as HomePage
+</code></pre>
+<h3 id="example-2">Example 2</h3>
+<pre><code class="language-txt">import python &quot;./python/app_bridge.py&quot; as app
+var.set[&quot;snapshot&quot;; py.call[&quot;app.bootstrap&quot;]]
+</code></pre>
+<h3 id="integration-with-existing-erire">Integration With Existing Erire</h3>
+<ul>
+<li>Reuses current import pipeline idea.</li>
+<li><code>app.json</code> keeps packaging/build metadata.</li>
+<li>Existing Python bridge folder conventions remain intact.</li>
+</ul>
+<hr />
+<h2 id="7-cli-tooling">7. CLI Tooling</h2>
+<h3 id="concept">Concept</h3>
+<p>The CLI should be productized around app development, not just runtime invocation.</p>
+<h3 id="command-design">Command Design</h3>
+<pre><code class="language-txt">erire run
+erire build
+erire init MyApp
+erire dev
+erire fmt
+erire check
+erire test
+</code></pre>
+<h3 id="example-1">Example 1</h3>
+<pre><code class="language-txt">erire init dashboard_app
+erire run src/main.er
+</code></pre>
+<h3 id="example-2">Example 2</h3>
+<pre><code class="language-txt">erire dev
+erire build --release
+</code></pre>
+<h3 id="integration-with-existing-erire">Integration With Existing Erire</h3>
+<ul>
+<li>Maps naturally onto existing <code>--check</code>, <code>--build</code>, <code>--new</code></li>
+<li>Keeps <code>erire.exe</code> as the single developer tool</li>
+<li><code>dev</code> can later add live-reload and diagnostics streaming</li>
+</ul>
+<hr />
+<h2 id="8-performance-model">8. Performance Model</h2>
+<h3 id="parsing-model">Parsing Model</h3>
+<ul>
+<li>Lexer remains token-based and fast.</li>
+<li>Parser adds new nodes for <code>component</code>, <code>layout.*</code>, <code>style</code>, <code>theme</code>, and <code>state</code>.</li>
+<li>Component expansion can happen in semantic lowering.</li>
+<li>Imports should be resolved into one module graph before runtime execution.</li>
+</ul>
+<h3 id="rendering-pipeline">Rendering Pipeline</h3>
+<ol>
+<li>Parse source into AST</li>
+<li>Resolve imports/components/styles/themes</li>
+<li>Build a lightweight virtual UI tree</li>
+<li>Compute layout tree</li>
+<li>Diff against the currently mounted tree</li>
+<li>Reposition or update only changed Win32/native nodes</li>
+</ol>
+<h3 id="efficient-updates">Efficient Updates</h3>
+<ul>
+<li>State changes mark dependent nodes dirty</li>
+<li>Layout is recalculated only for affected branches</li>
+<li>Text/style changes update only matching node handles</li>
+<li>Webview/image/input keep stable native handles where possible</li>
+</ul>
+<h3 id="integration-with-existing-erire">Integration With Existing Erire</h3>
+<ul>
+<li>Reuses the current node registry, page system, ids, and event bindings</li>
+<li>Adds a diff/layout phase before the existing native drawing layer</li>
+<li>Avoids a full runtime rewrite</li>
+</ul>
+<hr />
+<h2 id="step-by-step-evolution-path">Step-By-Step Evolution Path</h2>
+<ol>
+<li>Add <code>style</code> and <code>theme</code> syntax first because they extend the existing preset system.</li>
+<li>Add <code>state[...]</code> and <code>state.set[...]</code> with dependency tracking.</li>
+<li>Add <code>layout.row/column/stack/grid</code> and child containers.</li>
+<li>Add <code>component</code> definitions and expansion.</li>
+<li>Add <code>import erire</code> module support.</li>
+<li>Add <code>event.emit</code> and <code>event.listen</code>.</li>
+<li>Add <code>erire dev</code> live reload and diagnostics.</li>
+</ol>
+<hr />
+<h2 id="full-vnext-example-app">Full vNext Example App</h2>
+<pre><code class="language-txt">theme[&quot;light&quot;;
+    bg:&quot;#f8fafc&quot;;
+    surface:&quot;#ffffff&quot;;
+    text:&quot;#111827&quot;;
+    muted:&quot;#64748b&quot;;
+    accent:&quot;#2563eb&quot;
+]
+
+style[&quot;primaryBtn&quot;; bg:&quot;#2563eb&quot;; color:&quot;#ffffff&quot;; radius:12; padding:14]
+style[&quot;metricCard&quot;; bg:&quot;#ffffff&quot;; border:&quot;#e5e7eb&quot;; radius:18; padding:18]
+style[&quot;pageTitle&quot;; size:28; color:&quot;#111827&quot;]
+style[&quot;mutedLabel&quot;; size:13; color:&quot;#64748b&quot;]
+style[&quot;heroMetric&quot;; size:24; color:&quot;#0f172a&quot;]
+
+component MetricTile[label; value] [
+    card.style[&quot;metricCard&quot;]
+        .children[
+            text.value[$label].style[&quot;mutedLabel&quot;]
+            text.value[$value].style[&quot;heroMetric&quot;]
+        ]
+]
+
+state[&quot;page&quot;; &quot;dashboard&quot;]
+state[&quot;search&quot;; &quot;&quot;]
+
+import python &quot;./python/system_bridge.py&quot; as sys
+var.set[&quot;snapshot&quot;; py.call[&quot;sys.get_snapshot&quot;]]
+
+screen.create[app;size;80;60;1280;760]
+screen.title[&quot;Erire System Center&quot;]
+screen.theme[&quot;light&quot;]
+
+screen.add[
+    layout.column[
+        padding[24]
+        gap[18]
+        children[
+            layout.row[
+                justify[between]
+                align[center]
+                children[
+                    text.value[&quot;Erire System Center&quot;].style[&quot;pageTitle&quot;]
+                    layout.row[
+                        gap[10]
+                        children[
+                            input.bind[&quot;search&quot;].placeholder[&quot;Search tools&quot;]
+                            button.text[&quot;Refresh&quot;].style[&quot;primaryBtn&quot;].onClick[
+                                var.set[&quot;snapshot&quot;; py.call[&quot;sys.get_snapshot&quot;]]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+            layout.row[
+                gap[16]
+                children[
+                    MetricTile[&quot;CPU&quot;; $snapshot.cpu.usage_label]
+                    MetricTile[&quot;RAM&quot;; $snapshot.ram.used_label]
+                    MetricTile[&quot;Disk&quot;; $snapshot.disk.used_label]
+                ]
+            ]
+            layout.grid[
+                columns[2]
+                gap[16]
+                children[
+                    card.children[
+                        text.value[&quot;OS&quot;]
+                        text.value[$snapshot.os.name]
+                    ]
+                    card.children[
+                        text.value[&quot;GPU&quot;]
+                        text.value[$snapshot.gpu.name]
+                    ]
+                ]
+            ]
+        ]
+    ]
+]
+</code></pre>
+<hr />
+<h2 id="why-erire-is-easier-than-traditional-ui-frameworks">Why Erire Is Easier Than Traditional UI Frameworks</h2>
+<ul>
+<li>It starts from UI, not from application plumbing.</li>
+<li>A small number of chain-based commands covers most desktop app work.</li>
+<li>Python bridge support removes the need to invent a second backend story.</li>
+<li>The mental model is simpler than Flutter widgets or React component lifecycle.</li>
+<li>The runtime can stay native and fast because the language is specialized for desktop UI only.</li>
+</ul>
+
+</article>
+    </main>
+  </div>
+  <script>
+    window.__PAGES__ = {"current": ["readme", "current-language-reference", "building-full-apps", "dev-log", "multiline-inputs"], "tutorial": ["tutorial-1-first-window", "tutorial-2-forms-events-bindings", "tutorial-3-pages-navigation-webview", "tutorial-4-python-bridge", "tutorial-5-build-package"], "studio": ["erire-studio-design"], "design": ["erire-next-language-design"]};
+    window.__SEARCH_INDEX__ = [{"type": "Current", "id": "readme", "group": "current", "title": "Overview", "text": "# Erire Documentation\n\nThis documentation set is split into two categories:\n\n- current product documentation: what the runtime and tooling support today\n- design documentation: roadmap and future-facing ideas that are not yet the current language\n\nIf you are building an app right now, stay inside the \"Current\" and \"Tutorials\" sections first.\n\n## Start Here\n\n- [../README.md](../README.md): repository overview, build, CLI, and doc map\n- [Current Language Reference](current-language-reference.md): the best single reference for the language as it exists today\n- [Building Full Apps with Erire](building-full-apps-with-erire.md): how to go from idea to structured desktop application\n\n## Current Documentation\n\n- [Current Language Reference](current-language-reference.md)\n- [Dev Log](dev-log.md)\n- [Building Full Apps with Erire](building-full-apps-with-erire.md)\n- [Multiline and Read-Only Inputs](erire-multiline-inputs.md)\n\n## Tutorials\n\n- [Tutorial 1: Your First Window](tutorials/01-first-window.md)\n- [Tutorial 2: Forms, Events, and Bindings](tutorials/02-forms-events-and-bindings.md)\n- [Tutorial 3: Pages, Navigation, and WebView](tutorials/03-pages-navigation-and-webview.md)\n- [Tutorial 4: Python Bridge](tutorials/04-python-bridge.md)\n- [Tutorial 5: Build and Package](tutorials/05-build-and-package.md)\n\n## Studio Documentation\n\n- [Studio README](../studio/README.md)\n- [Studio Architecture](../studio/ARCHITECTURE.md)\n- [Erire Studio Design Notes](erire-studio.md)\n\n## Design and Roadmap Docs\n\nThese files are important, but they describe direction rather than the exact current runtime:\n\n- [Erire Next Language Design](erire-next-language.md)\n- [Erire Studio Design Notes](erire-studio.md)\n\n## How To Read This Repo\n\nUse this order if you are new:\n\n1. Read the root [README](../README.md).\n2. Read the [Current Language Reference](current-language-reference.md).\n3. Work through the tutorials in order.\n4. Use [Building Full Apps with Erire](building-full-apps-with-erire.md) when you start structuring a real app.\n5. Use the Studio docs if you want the IDE workflow.\n"}, {"type": "Current", "id": "current-language-reference", "group": "current", "title": "Current Language Reference", "text": "# Erire Current Language Reference\n\nThis document describes the language and tooling supported by the current runtime in this repository. It is intentionally grounded in the current parser, semantic analyzer, runtime, UI layer, and packager.\n\n## 1. Mental Model\n\nAn Erire program is a sequence of statements that runs in source order.\n\n- UI is created with `screen.add[...]`.\n- Runtime state is stored with `var.set[...]`.\n- Inputs can push text into variables through `input.bind[...]`.\n- Event blocks run later in response to user actions.\n- `backend.er` is loaded automatically before the entry file when it sits beside it.\n\nImportant runtime behavior:\n\n- `screen.add[...]` creates a node immediately.\n- `screen.setText[...]` only works after a node with that `id` exists.\n- `onLoad[...]` is deferred until the UI has been created.\n- Accessing an undefined variable currently resolves to an empty string.\n\n## 2. Program Structure\n\nThe two most common project shapes are:\n\n### Small CLI-created project\n\n```text\nMyApp/\n  main.er\n  backend.er\n  app.json\n  assets/\n  python/\n  cpp/\n```\n\n### Larger Studio-style project\n\n```text\nMyApp/\n  app.json\n  src/\n    main.er\n    backend.er\n  pages/\n  components/\n  assets/\n  python/\n  build/\n  tests/\n```\n\n## 3. Supported Statements\n\n### `screen.create[...]`\n\nCreates or configures the app window.\n\nAccepted shapes today:\n\n```erire\nscreen.create[100; 100; 900; 560]\nscreen.create[app; size; 100; 100; 900; 560]\n```\n\nThe six-argument form is the one used by most current examples.\n\n### `screen.title[...]`\n\nSets the window title.\n\n```erire\nscreen.title[\"My App\"]\n```\n\n### `screen.bg[...]`\n\nSets the window background color.\n\n```erire\nscreen.bg[\"#0f172a\"]\n```\n\n### `screen.add[...]`\n\nAdds one UI element to the active app.\n\n```erire\nscreen.add[text.value[\"Hello\"]]\n```\n\n### `screen.show[...]`\n\nSwitches the current page.\n\n```erire\nscreen.show[\"settings\"]\n```\n\nThe runtime starts on page `main`. If you place nodes on another page such as `home`, call `screen.show[\"home\"]` during startup.\n\n### `screen.setText[...]`\n\nUpdates the text/value of an existing node by `id`.\n\n```erire\nscreen.setText[\"headline\"; \"Updated\"]\n```\n\nThis is also how current Erire changes:\n\n- text node content\n- input content\n- button labels\n- webview URLs by changing the webview node text\n\n### `var.set[...]`\n\nCreates or updates a runtime variable.\n\n```erire\nvar.set[\"status\"; \"Ready\"]\nvar.set[\"sum\"; math.add[2; 3]]\n```\n\n### `import python \"...py\" as alias`\n\nRegisters a Python bridge script.\n\n```erire\nimport python \"./python/app_bridge.py\" as app\n```\n\nThe active import system used in real apps today is the Python import form above.\n\n### Control Flow\n\nErire currently supports:\n\n```erire\nif[$count > 0][\n    screen.setText[\"status\"; \"Positive\"]\n] else.if[$count == 0][\n    screen.setText[\"status\"; \"Zero\"]\n] else[\n    screen.setText[\"status\"; \"Negative\"]\n]\n\nwhile[$counter <= 5][\n    var.set[\"counter\"; math.add[$counter; 1]]\n]\n\nfor[\"i\"; 1; 4][\n    screen.setText[\"status\"; $i]\n]\n```\n\n`for[...]` accepts:\n\n```erire\nfor[\"name\"; start; end]\nfor[\"name\"; start; end; step]\n```\n\n## 4. Values and Expressions\n\nErire values can be:\n\n- strings: `\"Hello\"`\n- numbers: `42`\n- booleans: `true`, `false`\n- symbols: `app`\n- variables: `$title`, `$result.message`, `$result.items.0`\n- call expressions: `math.mul[6; 7]`, `py.call[\"app.fetch\"]`\n\nStructured JSON returned from Python is flattened into dotted variable paths. If Python returns:\n\n```json\n{ \"message\": \"Done\", \"stats\": { \"count\": 3 } }\n```\n\nThen Erire can read:\n\n```erire\n$result.message\n$result.stats.count\n```\n\n## 5. Elements\n\n### `text` / `label`\n\nText output nodes.\n\nCommon usage:\n\n```erire\nscreen.add[text.value[\"Hello\"].size[24].color[\"#ffffff\"]]\n```\n\n### `btn` / `button`\n\nClickable button nodes.\n\n```erire\nscreen.add[button.text[\"Save\"].onClick[\n    screen.setText[\"status\"; \"Saved\"]\n]]\n```\n\n### `input`\n\nText input fields, including multiline and read-only variants.\n\n```erire\nscreen.add[input.placeholder[\"Type here\"].bind[\"query\"]]\n```\n\n### `image`\n\nBitmap/image nodes.\n\n```erire\nscreen.add[image.src[\"./assets/logo.png\"].fit[\"contain\"]]\n```\n\n### `webview`\n\nEmbedded browser node. A URL is required.\n\n```erire\nscreen.add[webview.url[\"https://example.com\"].id[\"browser\"]]\n```\n\n### `box` / `card` / `panel`\n\nSurface/container-like nodes for custom-drawn panels and cards.\n\n```erire\nscreen.add[card.text[\"Overview\"].radius[20].bg[\"#111827\"]]\n```\n\n`card` and `panel` are specialized aliases of `box` with different default surface styles.\n\n## 6. Common Properties\n\nThese properties are shared by most elements:\n\n| Property | Meaning |\n| --- | --- |\n| `x`, `y` | Position |\n| `w`, `h` | Size |\n| `id` | Node id for later `screen.setText[...]` or command targeting |\n| `page` | Page name used by `screen.show[...]` |\n| `preset` | Built-in style preset |\n| `color` | Text color |\n| `bg` | Main background color |\n| `bg2` | Secondary background color for painted surfaces |\n| `border` | Border width |\n| `borderColor` | Border color "}, {"type": "Current", "id": "building-full-apps", "group": "current", "title": "Building Full Apps with Erire", "text": "# Building Full Apps with Erire\n\nThis guide explains how experienced developers should think about building a complete desktop application with Erire as it exists today.\n\nThe short version:\n\n- use Erire for the desktop UI shell\n- use `backend.er` for lightweight app logic\n- use Python for data, files, automation, APIs, and non-trivial processing\n- use `assets/`, `app.json`, and packaging from the start\n- grow the project in the Studio-style structure even if you are not using Studio yet\n\n## 1. Choose The Right Project Shape\n\nFor serious work, use a structured layout:\n\n```text\nMyApp/\n  app.json\n  src/\n    main.er\n    backend.er\n  pages/\n  components/\n  assets/\n  python/\n  build/\n  tests/\n```\n\nWhy this shape works well:\n\n- `src/main.er` owns the screen and event wiring\n- `src/backend.er` owns native Erire setup and derived values\n- `pages/` holds page-specific ideas even before Erire gets full component imports\n- `assets/` is ready for images, icons, and packaged resources\n- `python/` gives the app a real backend layer\n- `build/` keeps outputs out of source folders\n\nEven if the runtime does not yet import `pages/*.er` as first-class Erire modules, this structure keeps the project sane as it grows.\n\nOne current implementation detail to plan around:\n\n- Studio uses a root `app.json` for project discovery\n- runtime and packaging metadata are currently read beside the entry `.er` file\n\nSo if your entry is `src/main.er` and you rely on runtime metadata like `win_title` or `win_icon`, be deliberate about where that metadata lives.\n\n## 2. Split Logic Into Three Layers\n\n### Layer A: UI Composition in `main.er`\n\nKeep `main.er` focused on:\n\n- window creation\n- page shells\n- ids\n- event wiring\n- calls to `screen.show[...]`\n- calls to `screen.setText[...]`\n\n### Layer B: Lightweight Native Logic in `backend.er`\n\nUse `backend.er` for:\n\n- startup values\n- string formatting\n- math\n- native loops\n- simple state derivation\n\nThis keeps obvious setup logic inside Erire itself.\n\n### Layer C: Heavy Logic in `python/`\n\nUse Python when the app needs:\n\n- filesystem access\n- JSON and config handling\n- HTTP or external services\n- search/indexing\n- automation\n- system inspection\n- data transformation\n\nThis keeps the UI layer small and readable while still letting the app do real work.\n\n## 3. Design The App Before Writing Widgets\n\nBecause current Erire layout is coordinate-driven, planning matters.\n\nBefore coding:\n\n1. List your pages.\n2. Decide which ids will be updated later.\n3. Decide which inputs need `bind[...]`.\n4. Decide which actions stay native and which go to Python.\n5. Sketch the rectangles and spacing system you will use.\n\nGood questions to answer first:\n\n- What is the home page?\n- Which controls need dynamic updates?\n- Which results are shown as text, lists, or embedded web pages?\n- What should load in `onLoad[...]`?\n\n## 4. Build One Stable Screen Shell First\n\nIn current Erire, strong apps usually start with:\n\n- title area\n- content area\n- status area\n- primary action buttons\n\nThat shell gives you stable ids and stable geometry before you layer in data.\n\nRecommended shell ids:\n\n- `page_title`\n- `page_subtitle`\n- `status`\n- `primary_input`\n- `result_view`\n\nKeep ids predictable and descriptive. `screen.setText[...]` is one of the main update paths in the runtime, so id discipline is part of app architecture.\n\n## 5. Treat Pages As Distinct UI States\n\nUse `page[...]` and `screen.show[...]` to separate workflows cleanly.\n\nTypical page split:\n\n- `overview`\n- `editor`\n- `logs`\n- `settings`\n- `help`\n\nThis is better than trying to cram every control into one giant screen and manually hide pieces with text tricks.\n\n## 6. Use `bind[...]` For Form Inputs\n\nInputs with `bind[...]` are one of the most practical tools in current Erire.\n\nUse them for:\n\n- search boxes\n- form fields\n- filenames\n- filters\n- URLs\n\nThen let event blocks consume the variable:\n\n```erire\nscreen.add[input.bind[\"query\"].id[\"queryInput\"].onChange[\n    screen.setText[\"status\"; $query]\n]]\n```\n\nThis keeps the UI readable and reduces manual input plumbing.\n\n## 7. Push Data Work To Python Early\n\nA common Erire mistake is trying to force too much non-UI behavior into `screen.setText[...]` chains.\n\nBetter approach:\n\n- Erire owns the interaction\n- Python owns the expensive or stateful work\n- Erire receives a clean result payload\n\nExample flow:\n\n1. User clicks `Load Project`.\n2. Erire calls `py.call[\"app.scan_project\"; $project_root]`.\n3. Python returns a dictionary with counts, labels, and paths.\n4. Erire updates several nodes from `$scan.count`, `$scan.summary`, `$scan.root`.\n\nThat pattern scales much better than building pseudo-business logic inside the UI file.\n\n## 8. Use Structured Python Results Deliberately\n\nErire stores structured JSON into dotted variables automatically.\n\nIf Python returns:\n\n```json\n{\n  \"message\": \"Indexed\",\n  \"stats\": { \"files\": 42, \"errors\": 0 }\n}\n```\n\nThen your UI can read:\n\n```erire\n$result.message\n$result.stats.files\n$result.stats.errors\n```\n\nDesign"}, {"type": "Current", "id": "dev-log", "group": "current", "title": "Dev Log", "text": "# Erire Dev Log\n\nThis dev log is a repository-based milestone log. It is not reconstructed from git history; it is based on the current codebase, shipped examples, templates, and supporting docs.\n\n## Snapshot\n\n- Current CLI banner in `src/main.c` identifies the tool as `Erire 1.0.4`.\n- The project currently includes the runtime, packager, examples, tests, and Erire Studio.\n\n## Milestone 1: Core Language and Frontend Pipeline\n\nThe first visible milestone is the core frontend pipeline:\n\n- lexer\n- parser\n- AST\n- semantic analyzer\n- runtime execution\n\nThis established the basic Erire shape:\n\n- chain-based element syntax\n- `screen.*` commands\n- `var.set[...]`\n- values, calls, variables, and conditions\n\nAt this point, Erire already had a strong identity: it was not trying to be a general programming language. It was trying to be a UI-first desktop language.\n\n## Milestone 2: Native Desktop UI Runtime\n\nThe runtime and UI layer evolved into a native desktop shell with these node families:\n\n- text/label\n- button\n- input\n- image\n- webview\n- box/card/panel\n\nThis was the moment Erire stopped being just a parser experiment and became an actual desktop UI runtime.\n\n## Milestone 3: Source-Order Runtime + Event Model\n\nThe current runtime executes statements in strict source order. That decision shaped the whole framework:\n\n- UI nodes exist immediately after `screen.add[...]`\n- variables mutate immediately\n- events observe the state produced by earlier statements\n- `onLoad[...]` is deferred so initial hydration can happen after app creation\n\nThis keeps the mental model simple and debuggable.\n\n## Milestone 4: Native Logic Layer in `.er`\n\nThe addition of:\n\n- `if`\n- `else.if`\n- `else`\n- `while`\n- `for`\n- native `text.*`, `math.*`, `sys.*`, `time.now[]`\n\ngave Erire a real \"backend inside the UI language\" story for lightweight logic.\n\nThat change matters because not every app needs Python for basic control flow and derived values.\n\n## Milestone 5: Automatic `backend.er`\n\nThe frontend loader now automatically merges `backend.er` before the entry module when both live in the same project area.\n\nThis created a practical split:\n\n- `backend.er`: setup, derived values, native control flow\n- `main.er`: screen creation and UI composition\n\nThat simple convention is one of the most useful design decisions in the current codebase.\n\n## Milestone 6: Python Bridge and Structured Results\n\nThe Python bridge turned Erire into a much more capable app platform.\n\nKey effects:\n\n- `import python \"...py\" as alias`\n- `py.call[\"alias.function\"; ...]`\n- JSON-encoded argument passing\n- structured JSON responses mapped into dotted runtime variables\n\nThis is the milestone that made file tools, dashboards, automation apps, and bridge-driven workflows practical.\n\n## Milestone 7: Packaging and App Distribution\n\nThe packager moved Erire from \"run scripts locally\" to \"ship desktop apps\".\n\nCurrent packaging behavior includes:\n\n- bundling the entry app and `backend.er`\n- bundling `assets/`, `python/`, and `app.json`\n- compiling Python helpers with `PyInstaller` when needed\n- optionally compiling native helpers from `cpp/`\n- applying icons to the output `.exe`\n- appending the payload to `ErireRunner.exe`\n\nThis is the milestone that made Erire an application workflow rather than just a runtime.\n\n## Milestone 8: UI Depth Features\n\nThe runtime continued to add the kinds of features real desktop apps need:\n\n- WebView controls and browser commands\n- image nodes and window branding\n- multiline and read-only inputs\n- custom-drawn presets\n- pages via `page[...]` + `screen.show[...]`\n- animations\n- console profile launching\n\nThis phase is where the examples began to look like tools and dashboards instead of toy demos.\n\n## Milestone 9: Erire Studio\n\nErire Studio is a major shift in the project:\n\n- dedicated project workflow\n- structured templates\n- file tree, editor, outline, logs\n- run/check/build integration\n- Python workflow awareness\n\nStudio changes the developer story from \"edit `.er` files manually\" to \"build complete projects inside a purpose-built environment\".\n\n## Milestone 10: Design Work for vNext\n\nThe roadmap docs show a clear next direction:\n\n- layout primitives\n- reusable components\n- reactive state\n- stronger styling/theming\n- richer project structure\n\nThese ideas live today in `docs/erire-next-language.md`. They are important because they explain where the current system wants to go without pretending those features already exist.\n\n## What The Current Repo Says About Erire\n\nThe codebase tells a consistent story:\n\n- Erire wants to stay small and direct.\n- It wants desktop UI to be the center of the model.\n- It treats Python as a powerful companion layer, not as an implementation accident.\n- It prefers convention and explicitness over magic.\n- It is already beyond \"toy DSL\" territory, but it is still intentionally narrow enough to stay understandable.\n\n## Recommended Next Reading\n\n- [Current Language Reference](current-language-reference.md)\n- [Building Full App"}, {"type": "Current", "id": "multiline-inputs", "group": "current", "title": "Multiline and Read-Only Inputs", "text": "# Multiline And Read-Only Inputs\n\n`Erire Bytecode Studio` needed two UI capabilities that were missing from the runtime:\n\n- pasting and editing multiple lines of text\n- showing long generated output without letting the user modify it\n\nTo support that cleanly inside Erire itself, the runtime now supports these `input` properties:\n\n- `input.multiline[\"true\"]`\n- `input.readonly[\"true\"]`\n- `input.readOnly[\"true\"]`\n\n## Why This Was Added\n\nErire already had `input`, but it was effectively a single-line field. That made it awkward to build:\n\n- text editors\n- byte/hex viewers\n- log panes\n- reverse-decoding tools\n- settings areas with larger text blocks\n\nAdding multiline and read-only behavior strengthens Erire as a desktop UI language instead of pushing that work into external tooling.\n\n## Syntax\n\n```erire\nscreen.add[\n    input.value[\"Line 1\\nLine 2\"]\n        .multiline[\"true\"]\n        .x[40]\n        .y[80]\n        .w[420]\n        .h[180]\n]\n\nscreen.add[\n    input.value[\"Generated output\"]\n        .multiline[\"true\"]\n        .readonly[\"true\"]\n        .x[40]\n        .y[280]\n        .w[420]\n        .h[180]\n]\n```\n\n## Runtime Behavior\n\n- multiline inputs use a real multiline Windows `EDIT` control\n- `Enter` inserts a new line\n- vertical scrolling is enabled automatically\n- read-only inputs remain selectable and copyable while blocking edits\n- larger default heights are applied when `multiline` is enabled\n\n## Where It Was Implemented\n\n- runtime property parsing: `src/runtime.c`\n- semantic validation: `src/semantic.c`\n- node spec / state: `src/ui.h`\n- Win32 input creation and layout: `src/ui.c`\n"}, {"type": "Tutorial", "id": "tutorial-1-first-window", "group": "tutorial", "title": "Tutorial 1: Your First Window", "text": "# Tutorial 1: Your First Window\n\nThis tutorial builds the smallest useful Erire app and explains the core syntax you will use every day.\n\n## Goal\n\nWe will create a window with:\n\n- a title\n- a background color\n- one text node\n- one button\n- one click event that updates the text\n\n## Step 1: Create `hello.er`\n\n```erire\nscreen.create[app; size; 100; 100; 820; 520]\nscreen.title[\"Erire Hello\"]\nscreen.bg[\"#182028\"]\n\nscreen.add[text.value[\"Hello from Erire\"].id[\"headline\"].x[30].y[30].w[360].h[40].size[26].color[\"#ffffff\"]]\nscreen.add[button.text[\"Click Me\"].x[30].y[90].w[180].h[48].onClick[\n    screen.setText[\"headline\"; \"Button clicked\"]\n]]\n```\n\n## Step 2: Run Validation\n\n```powershell\n.\\erire.exe --check hello.er\n```\n\nUse `--check` constantly. It catches parser and semantic errors without opening the UI.\n\n## Step 3: Run The App\n\n```powershell\n.\\erire.exe hello.er\n```\n\n## What Each Line Does\n\n### `screen.create[...]`\n\nCreates the window. In current examples, the six-argument form is the common style:\n\n```erire\nscreen.create[app; size; 100; 100; 820; 520]\n```\n\nOnly the last four values matter to placement and size here:\n\n- `100`, `100`: initial window position\n- `820`, `520`: initial window size\n\n### `screen.title[...]`\n\nSets the window caption.\n\n### `screen.bg[...]`\n\nSets the window background color.\n\n### `screen.add[...]`\n\nAdds one UI element.\n\nThis element:\n\n```erire\ntext.value[\"Hello from Erire\"].id[\"headline\"].x[30].y[30].w[360].h[40].size[26].color[\"#ffffff\"]\n```\n\nmeans:\n\n- create a `text` node\n- set its text to `\"Hello from Erire\"`\n- give it id `headline`\n- place it at `(30, 30)`\n- size it to `(360, 40)`\n- draw it with font size `26`\n- draw it in white\n\n### `onClick[...]`\n\nThe button event block runs when the user clicks the button.\n\n```erire\nscreen.setText[\"headline\"; \"Button clicked\"]\n```\n\nThat line finds the node whose id is `headline` and updates its content.\n\n## Core Pattern To Remember\n\nMost Erire apps start with this pattern:\n\n1. Create the window.\n2. Add nodes.\n3. Give important nodes ids.\n4. Update those ids inside events.\n\n## Try Two Small Upgrades\n\n### Upgrade A: Add A Status Line\n\n```erire\nscreen.add[text.value[\"Status: waiting\"].id[\"status\"].x[30].y[160].w[300].h[24].size[14].color[\"#9fb0c8\"]]\n```\n\nThen change the event:\n\n```erire\nscreen.add[button.text[\"Click Me\"].x[30].y[90].w[180].h[48].onClick[\n    screen.setText[\"headline\"; \"Button clicked\"]\n    screen.setText[\"status\"; \"Status: click received\"]\n]]\n```\n\n### Upgrade B: Style The Button\n\n```erire\nscreen.add[button.text[\"Click Me\"].preset[\"primary\"].x[30].y[90].w[180].h[48].radius[14]]\n```\n\n## What You Learned\n\n- window creation\n- text nodes\n- button nodes\n- ids\n- click events\n- `screen.setText[...]`\n\nNext: [Tutorial 2: Forms, Events, and Bindings](02-forms-events-and-bindings.md)\n"}, {"type": "Tutorial", "id": "tutorial-2-forms-events-bindings", "group": "tutorial", "title": "Tutorial 2: Forms, Events, and Bindings", "text": "# Tutorial 2: Forms, Events, and Bindings\n\nThis tutorial moves from a static button demo to a real interactive form.\n\n## Goal\n\nWe will build:\n\n- a note input\n- a live preview\n- a multiline output box\n- a read-only log/status area\n\n## The App\n\n```erire\nscreen.create[app; size; 120; 100; 980; 680]\nscreen.title[\"Erire Form Demo\"]\nscreen.bg[\"#0f172a\"]\n\nscreen.add[text.value[\"Notes\"].x[36].y[28].w[220].h[34].size[28].color[\"#f8fafc\"]]\nscreen.add[text.value[\"Type in the input below. The bound variable updates before onChange runs.\"].x[36].y[70].w[620].h[22].size[14].color[\"#94a3b8\"]]\n\nscreen.add[input.value[\"Hello from Erire\"].placeholder[\"Write a short note\"].bind[\"note_text\"].id[\"noteInput\"].x[36].y[122].w[420].h[48].padding[12].radius[14].bg[\"#111827\"].borderColor[\"#334155\"].color[\"#f8fafc\"].onChange[\n    screen.setText[\"livePreview\"; $note_text]\n    screen.setText[\"status\"; \"Input changed\"]\n]]\n\nscreen.add[text.value[\"Live Preview\"].x[36].y[208].w[220].h[22].size[16].color[\"#7dd3fc\"]]\nscreen.add[text.value[\"Hello from Erire\"].id[\"livePreview\"].x[36].y[238].w[420].h[48].size[18].color[\"#e5e7eb\"]]\n\nscreen.add[text.value[\"Multiline Output\"].x[500].y[118].w[220].h[22].size[16].color[\"#7dd3fc\"]]\nscreen.add[input.value[\"Line 1\\nLine 2\"].id[\"outputBox\"].multiline[\"true\"].readonly[\"true\"].x[500].y[148].w[420].h[220].padding[12].radius[14].bg[\"#111827\"].borderColor[\"#334155\"].color[\"#e5e7eb\"]]\n\nscreen.add[button.text[\"Copy Preview To Output\"].x[36].y[320].w[220].h[46].bg[\"#2563eb\"].radius[14].onClick[\n    screen.setText[\"outputBox\"; $note_text]\n    screen.setText[\"status\"; \"Preview copied to output\"]\n]]\n\nscreen.add[panel.text[\"\"].x[36].y[596].w[884].h[44].bg[\"#111827\"].borderColor[\"#223245\"].radius[14]]\nscreen.add[text.value[\"Ready\"].id[\"status\"].x[52].y[608].w[840].h[20].size[14].color[\"#94a3b8\"]]\n```\n\n## Key Concepts\n\n### `bind[...]`\n\nThis line:\n\n```erire\ninput.bind[\"note_text\"]\n```\n\nmeans the input pushes its current text into the variable `$note_text`.\n\nIn the current runtime:\n\n- the initial input value is copied into `$note_text`\n- every later change updates `$note_text`\n- if `onChange[...]` exists, the bound variable is updated before the event body runs\n\n### `onChange[...]`\n\n```erire\nonChange[\n    screen.setText[\"livePreview\"; $note_text]\n]\n```\n\nThis gives you instant UI feedback without needing Python or extra state machinery.\n\n### `multiline[\"true\"]`\n\nTurns the input into a multiline text area.\n\n### `readonly[\"true\"]`\n\nKeeps the field selectable and copyable, but blocks editing.\n\nThis is ideal for:\n\n- generated output\n- logs\n- previews\n- read-only content panes\n\n## Why This Matters\n\nBindings and `onChange[...]` are the fastest way to make Erire feel alive.\n\nUse them for:\n\n- search boxes\n- filters\n- settings forms\n- live previews\n- editor-like tools\n\n## A Good Practical Rule\n\nUse the input itself for authoring, and a read-only multiline input for output. That pattern maps well to:\n\n- code generators\n- note tools\n- JSON formatters\n- prompt tools\n- admin utilities\n\n## Small Exercises\n\n### Exercise A: Add A Clear Button\n\nAdd:\n\n```erire\nscreen.add[button.text[\"Clear\"].x[272].y[320].w[120].h[46].bg[\"#475569\"].radius[14].onClick[\n    screen.setText[\"noteInput\"; \"\"]\n    screen.setText[\"livePreview\"; \"\"]\n    screen.setText[\"status\"; \"Cleared\"]\n]]\n```\n\n### Exercise B: Start With A Multiline Editor\n\nChange the main input to:\n\n```erire\n.multiline[\"true\"].h[180]\n```\n\n## What You Learned\n\n- `input.bind[...]`\n- `onChange[...]`\n- multiline input\n- read-only input\n- using ids to move data between controls\n\nNext: [Tutorial 3: Pages, Navigation, and WebView](03-pages-navigation-and-webview.md)\n"}, {"type": "Tutorial", "id": "tutorial-3-pages-navigation-webview", "group": "tutorial", "title": "Tutorial 3: Pages, Navigation, and WebView", "text": "# Tutorial 3: Pages, Navigation, and WebView\n\nThis tutorial shows how to structure a multi-page desktop UI and how to use the embedded browser support.\n\n## Goal\n\nWe will build:\n\n- a `home` page\n- a `docs` page\n- navigation buttons\n- a URL field\n- a webview that can change pages\n\n## The App\n\n```erire\nscreen.create[app; size; 90; 80; 1240; 760]\nscreen.title[\"Erire Docs Shell\"]\nscreen.bg[\"#0b1220\"]\nscreen.show[\"home\"]\n\nscreen.add[text.value[\"Erire Docs Shell\"].page[\"home\"].x[40].y[34].w[360].h[34].size[28].color[\"#f8fafc\"]]\nscreen.add[text.value[\"A two-page app: overview on one page, embedded docs on the other.\"].page[\"home\"].x[40].y[76].w[520].h[24].size[14].color[\"#94a3b8\"]]\nscreen.add[button.text[\"Open Docs\"].page[\"home\"].x[40].y[128].w[160].h[46].bg[\"#2563eb\"].radius[14].onClick[\n    screen.show[\"docs\"]\n]]\nscreen.add[card.text[\"Use pages to separate tasks cleanly.\\n\\nKeep overview UI on one page and browser-heavy content on another.\"].page[\"home\"].x[40].y[210].w[420].h[180].padding[18].radius[20].bg[\"#111827\"].borderColor[\"#243244\"].color[\"#e5e7eb\"]]\n\nscreen.add[text.value[\"Documentation Browser\"].page[\"docs\"].x[24].y[24].w[360].h[34].size[28].color[\"#f8fafc\"]]\nscreen.add[input.value[\"https://www.example.com\"].bind[\"target_url\"].id[\"urlBar\"].page[\"docs\"].x[24].y[74].w[860].h[44].padding[12].radius[14].bg[\"#111827\"].borderColor[\"#334155\"].color[\"#f8fafc\"].onChange[\n    screen.setText[\"status\"; $target_url]\n]]\nscreen.add[button.text[\"Go\"].page[\"docs\"].x[900].y[74].w[84].h[44].bg[\"#15803d\"].radius[14].onClick[\n    webview.open[\"browser\"; $target_url]\n    screen.setText[\"status\"; $target_url]\n]]\nscreen.add[button.text[\"Back\"].page[\"docs\"].x[996].y[74].w[84].h[44].bg[\"#475569\"].radius[14].onClick[\n    webview.back[\"browser\"]\n]]\nscreen.add[button.text[\"Reload\"].page[\"docs\"].x[1092].y[74].w[100].h[44].bg[\"#1d4ed8\"].radius[14].onClick[\n    webview.reload[\"browser\"]\n]]\nscreen.add[button.text[\"Home\"].page[\"docs\"].x[24].y[132].w[100].h[42].bg[\"#334155\"].radius[14].onClick[\n    screen.show[\"home\"]\n]]\n\nscreen.add[webview.url[\"https://www.example.com\"].id[\"browser\"].page[\"docs\"].x[24].y[190].w[1168].h[500].radius[18].border[1].bg[\"#ffffff\"].borderColor[\"#dbe4ee\"].shadow[12]]\n\nscreen.add[panel.text[\"\"].page[\"docs\"].x[24].y[704].w[1168].h[32].bg[\"#111827\"].borderColor[\"#243244\"].radius[12]]\nscreen.add[text.value[\"Ready\"].id[\"status\"].page[\"docs\"].x[40].y[711].w[1100].h[18].size[13].color[\"#94a3b8\"]]\n```\n\n## Key Concepts\n\n### `page[...]`\n\nEvery node can be assigned to a named page:\n\n```erire\n.page[\"home\"]\n.page[\"docs\"]\n```\n\nOnly the active page is shown.\n\n### `screen.show[...]`\n\nSwitches the visible page:\n\n```erire\nscreen.show[\"docs\"]\n```\n\nThis is the simplest clean way to build multi-screen apps in current Erire.\n\nThe current runtime starts on page `main`, so this tutorial explicitly switches to `home` at startup.\n\n### `webview.url[...]`\n\nCreates the embedded browser node:\n\n```erire\nwebview.url[\"https://www.example.com\"].id[\"browser\"]\n```\n\nThe `id` matters because later commands target the webview by id.\n\n### WebView Commands\n\nThe current runtime supports:\n\n```erire\nwebview.open[\"browser\"; \"https://example.com\"]\nwebview.back[\"browser\"]\nwebview.forward[\"browser\"]\nwebview.reload[\"browser\"]\nwebview.runJS[\"browser\"; \"document.title='Modified'\"]\n```\n\n## A Useful Trick\n\nYou can also navigate the webview by changing its text through `screen.setText[...]` because the runtime treats webview text as the current URL.\n\nStill, `webview.open[...]` is the clearer and more direct command for browser navigation.\n\n## Design Guidance\n\nUse pages when:\n\n- you have separate workflows\n- one page is a dashboard and another is a tool\n- the app would become crowded as one screen\n\nUse a webview when:\n\n- you need live web content\n- you want an internal browser shell\n- you want to embed a docs/help surface\n- you want hybrid desktop + web content\n\n## Small Exercises\n\n### Exercise A: Add A `Help` Page\n\nCreate a third page with:\n\n- app version\n- keyboard hints\n- packaging instructions\n\n### Exercise B: Add `Run JS`\n\nAdd:\n\n```erire\nscreen.add[button.text[\"Run JS\"].page[\"docs\"].x[1100].y[132].w[92].h[42].bg[\"#7c3aed\"].radius[14].onClick[\n    webview.runJS[\"browser\"; \"document.body.style.background='#f8fafc'; document.title='Injected from Erire';\"]\n    screen.setText[\"status\"; \"JavaScript injected\"]\n]]\n```\n\n## What You Learned\n\n- page-based navigation\n- `screen.show[...]`\n- embedded webview usage\n- webview browser commands\n\nNext: [Tutorial 4: Python Bridge](04-python-bridge.md)\n"}, {"type": "Tutorial", "id": "tutorial-4-python-bridge", "group": "tutorial", "title": "Tutorial 4: Python Bridge", "text": "# Tutorial 4: Python Bridge\n\nThis tutorial covers the most important integration point in Erire: building a Python bridge that Erire can call safely and repeatedly.\n\n## Goal\n\nWe will build:\n\n- an Erire UI\n- a Python bridge script\n- a `ping` action\n- a `make_summary` action\n- structured result data returned from Python\n\n## Project Shape\n\n```text\nBridgeDemo/\n  app.json\n  src/\n    main.er\n  python/\n    app_bridge.py\n```\n\n## Step 1: Create `src/main.er`\n\n```erire\nimport python \"../python/app_bridge.py\" as app\n\nscreen.create[app; size; 120; 120; 1040; 680]\nscreen.title[\"Erire Python Bridge Demo\"]\nscreen.bg[\"#0f172a\"]\n\nscreen.add[text.value[\"Python Bridge Demo\"].x[36].y[28].w[320].h[34].size[28].color[\"#f8fafc\"]]\nscreen.add[text.value[\"Use Erire for the UI and Python for data or system work.\"].x[36].y[72].w[520].h[20].size[14].color[\"#94a3b8\"]]\n\nscreen.add[input.value[\"Erire bridge\"].bind[\"project_name\"].id[\"projectInput\"].x[36].y[126].w[320].h[46].padding[12].radius[14].bg[\"#111827\"].borderColor[\"#334155\"].color[\"#f8fafc\"]]\n\nscreen.add[button.text[\"Ping Python\"].x[36].y[196].w[160].h[44].bg[\"#2563eb\"].radius[14].onClick[\n    var.set[\"ping_result\"; py.call[\"app.ping\"]]\n    screen.setText[\"status\"; $ping_result.message]\n    screen.setText[\"rootView\"; $ping_result.root]\n]]\n\nscreen.add[button.text[\"Make Summary\"].x[208].y[196].w[180].h[44].bg[\"#15803d\"].radius[14].onClick[\n    var.set[\"summary\"; py.call[\"app.make_summary\"; $project_name]]\n    screen.setText[\"status\"; $summary.message]\n    screen.setText[\"summaryTitle\"; $summary.title]\n    screen.setText[\"summaryBody\"; $summary.body]\n]]\n\nscreen.add[text.value[\"Bridge root will appear here\"].id[\"rootView\"].x[36].y[272].w[760].h[22].size[14].color[\"#7dd3fc\"]]\n\nscreen.add[card.text[\"\"].x[36].y[326].w[640].h[220].bg[\"#111827\"].borderColor[\"#243244\"].radius[20]]\nscreen.add[text.value[\"Summary Title\"].id[\"summaryTitle\"].x[60].y[354].w[580].h[26].size[20].color[\"#f8fafc\"]]\nscreen.add[text.value[\"Summary body will appear here.\"].id[\"summaryBody\"].x[60].y[394].w[580].h[90].size[15].color[\"#cbd5e1\"]]\n\nscreen.add[panel.text[\"\"].x[36].y[590].w[968].h[40].bg[\"#111827\"].borderColor[\"#243244\"].radius[12]]\nscreen.add[text.value[\"Ready\"].id[\"status\"].x[52].y[602].w[920].h[18].size[13].color[\"#94a3b8\"]]\n```\n\n## Step 2: Create `python/app_bridge.py`\n\nThis script follows the bridge contract used by the current runtime.\n\n```python\n#!/usr/bin/env python3\nimport argparse\nimport base64\nimport json\nfrom pathlib import Path\nfrom typing import Any\n\n\nPROJECT_ROOT = Path(__file__).resolve().parent.parent\n\n\ndef _emit(payload: Any, exit_code: int = 0) -> None:\n    print(json.dumps(payload, ensure_ascii=False))\n    raise SystemExit(exit_code)\n\n\ndef _decode_args(encoded: str) -> list[Any]:\n    if not encoded:\n        return []\n    decoded = base64.b64decode(encoded.encode(\"ascii\")).decode(\"utf-8\")\n    value = json.loads(decoded)\n    if not isinstance(value, list):\n        raise ValueError(\"Bridge arguments must decode to a JSON list\")\n    return value\n\n\ndef ping() -> dict[str, Any]:\n    return {\n        \"message\": \"Python bridge connected\",\n        \"root\": str(PROJECT_ROOT),\n    }\n\n\ndef make_summary(name: Any = \"\") -> dict[str, Any]:\n    text = str(name).strip() or \"Unnamed Project\"\n    return {\n        \"message\": \"Summary generated\",\n        \"title\": f\"Project: {text}\",\n        \"body\": f\"{text} is now flowing through the Erire <-> Python bridge.\",\n    }\n\n\nALLOWED_FUNCTIONS = {\n    \"ping\": ping,\n    \"make_summary\": make_summary,\n}\n\n\ndef __erire_dispatch__(function_name: str, arguments: list[Any]) -> Any:\n    handler = ALLOWED_FUNCTIONS.get(function_name)\n    if handler is None:\n        raise PermissionError(f\"Function '{function_name}' is not whitelisted\")\n    return handler(*arguments)\n\n\ndef main() -> None:\n    parser = argparse.ArgumentParser(add_help=False)\n    parser.add_argument(\"--erire-call\", required=True)\n    parser.add_argument(\"--erire-args-b64\", default=\"\")\n    args = parser.parse_args()\n\n    try:\n        bridge_args = _decode_args(args.erire_args_b64)\n        result = __erire_dispatch__(args.erire_call, bridge_args)\n        _emit(result, 0)\n    except Exception as exc:\n        _emit({\"status\": \"error\", \"error\": str(exc)}, 1)\n\n\nif __name__ == \"__main__\":\n    main()\n```\n\n## Why The Script Looks Like This\n\nThe current runtime does not import Python as a library. It launches the bridge script as a subprocess and passes:\n\n- `--erire-call <function_name>`\n- `--erire-args-b64 <base64(json_list)>`\n\nSo the script must:\n\n1. parse those flags\n2. decode the argument list\n3. dispatch to a whitelisted function\n4. print a JSON result\n\nThat is the contract.\n\n## Step 3: Run The App\n\n```powershell\n.\\erire.exe src\\main.er\n```\n\n## Structured Result Access\n\nWhen Python returns:\n\n```python\n{\n    \"message\": \"Summary generated\",\n    \"title\": \"Project: Erire bridge\",\n    \"body\": \"...\"\n}\n```\n\nErire can access:\n\n```erire\n$summary.message\n$summary.title\n$summary.body\n```\n\n## Good Patterns For Real Apps\n\nReturn dic"}, {"type": "Tutorial", "id": "tutorial-5-build-package", "group": "tutorial", "title": "Tutorial 5: Build and Package", "text": "# Tutorial 5: Build and Package\n\nThis tutorial explains how to go from a working `.er` app to a packaged Windows executable.\n\n## Goal\n\nWe will cover:\n\n- `app.json`\n- running checks before packaging\n- building an `.exe`\n- icons\n- Python packaging requirements\n- what the packager bundles\n\n## Step 1: Add `app.json`\n\nCreate an `app.json` beside your project entry area.\n\nExample:\n\n```json\n{\n  \"name\": \"Bridge Demo\",\n  \"entry\": \"src/main.er\",\n  \"output\": \"build/bridge_demo.exe\",\n  \"icon\": \"assets/brand/app.ico\",\n  \"win_title\": \"Bridge Demo\",\n  \"win_icon\": \"assets/brand/app.ico\",\n  \"version\": \"0.1.0\"\n}\n```\n\nUseful fields today:\n\n- `name`\n- `entry`\n- `output`\n- `icon`\n- `win_title`\n- `win_icon`\n\nImportant current behavior:\n\n- runtime and packaging metadata are read beside the entry `.er` file\n- Studio project discovery uses a root project manifest\n\nIf your real entry is `src/main.er`, keep this nuance in mind when deciding where the runtime-facing `app.json` should live.\n\n## Step 2: Validate Before Packaging\n\nAlways run:\n\n```powershell\n.\\erire.exe --check src\\main.er\n```\n\nThis catches syntax and semantic problems before the build pipeline does more work.\n\n## Step 3: Build The App\n\n```powershell\n.\\erire.exe --build src\\main.er build\\bridge_demo.exe\n```\n\nIf you do not pass an output path, Erire writes to:\n\n```text\ndist\\<entry-name>.exe\n```\n\n## Step 4: Override Icon Or Window Title At Build Time\n\nYou can override packaging metadata from the CLI:\n\n```powershell\n.\\erire.exe --build --icon=assets\\brand\\app.png --win_title=\"Bridge Demo\" src\\main.er build\\bridge_demo.exe\n```\n\nCurrent icon notes:\n\n- `.ico` and `.png` are supported\n- PNG icons are converted through `tools/png_to_ico.py`\n\n## What The Packager Bundles\n\nThe current packager includes:\n\n- the entry `.er` file\n- auto-loaded `backend.er`\n- imported Python bridges\n- `assets/`\n- `python/`\n- `app.json`\n- optional compiled helper from `cpp/`\n\nThat means good project structure pays off immediately.\n\n## Python Packaging Requirement\n\nIf your app uses Python imports, packaging expects `PyInstaller`:\n\n```powershell\npython -m pip install pyinstaller\n```\n\nWithout it, packaging a Python-backed app will fail.\n\n## C++ Helper Support\n\nIf your project contains `cpp/` sources, the packager can compile them into:\n\n```text\ncpp\\native_cpp.exe\n```\n\nThis is optional, but it gives you a path for native helper workflows.\n\n## What Happens At Runtime\n\nThe final executable is based on `ErireRunner.exe`.\n\nDuring packaging:\n\n- the runner is copied\n- the packaged app payload is appended to it\n\nDuring launch:\n\n- the bundled payload is extracted to a temporary directory\n- the entry app is then run from that extracted package area\n\n## A Safe Build Checklist\n\nBefore shipping:\n\n1. Run `--check`.\n2. Launch the source app once.\n3. Confirm every imported Python file exists.\n4. Confirm `assets/` contains everything the UI expects.\n5. Confirm `app.json` title and icon metadata.\n6. Confirm `PyInstaller` is installed if Python is used.\n7. Build the `.exe`.\n8. Launch the packaged `.exe` and test the real packaged flow.\n\n## Common Build Commands\n\n### Build with default output\n\n```powershell\n.\\erire.exe --build src\\main.er\n```\n\n### Build with explicit output\n\n```powershell\n.\\erire.exe --build src\\main.er build\\my_app.exe\n```\n\n### Build with icon override\n\n```powershell\n.\\erire.exe --build --icon=assets\\brand\\app.ico src\\main.er build\\my_app.exe\n```\n\n### Build with icon and window title override\n\n```powershell\n.\\erire.exe --build --icon=assets\\brand\\app.png --win_title=\"My App\" src\\main.er build\\my_app.exe\n```\n\n## Final Advice\n\nPackaging works best when the app is already organized like a product:\n\n- `src/`\n- `assets/`\n- `python/`\n- `app.json`\n- stable ids\n- stable bridge files\n\nIf you want the design guidance behind that structure, continue with [Building Full Apps with Erire](../building-full-apps-with-erire.md).\n"}, {"type": "Studio", "id": "erire-studio-design", "group": "studio", "title": "Erire Studio Design", "text": "# Erire Studio Design\n\n## A. Product Vision\n\nErire Studio is the dedicated professional IDE for Erire and its Python bridge ecosystem. It should feel closer to a focused product studio than to a generic code editor:\n\n- purpose-built for Erire projects\n- deeply aware of Python helpers, app packaging, and assets\n- optimized for Windows desktop\n- visually bright, calm, minimal, and premium\n\nIt is not trying to compete with every general-purpose IDE. It is trying to be the fastest path from Erire idea to packaged desktop app.\n\n---\n\n## B. Full Feature List\n\n### Core Editing\n\n- multi-tab code editor\n- Erire syntax services\n- Python syntax services\n- line numbers\n- indentation and formatting hooks\n- snippets\n- quick insert templates\n- hover info\n- outline and symbols\n\n### Project Workflow\n\n- new project\n- open project\n- recent projects\n- project templates\n- project explorer\n- search in project\n- replace in project\n- asset browser\n\n### Build + Run\n\n- run Erire app\n- check/validate app\n- build packaged `.exe`\n- configure build output\n- track compiler logs\n- track runtime logs\n- build configurations\n\n### Python Integration\n\n- edit Python bridge files\n- configure interpreter\n- run helper scripts\n- capture Python errors\n- map Python files to Erire project\n\n### Productivity Tools\n\n- bottom terminal/logs/problems panels\n- right inspector/outline/preview panel\n- settings dialog\n- status bar\n- notifications/toasts\n- command palette in later phases\n\n---\n\n## C. UI Layout Specification\n\n### Top Title Bar\n\n- app title: `Erire Studio`\n- current project name\n- window controls\n- subtle brand icon\n\n### Menu Bar\n\n- File\n- Edit\n- View\n- Project\n- Run\n- Tools\n- Settings\n- Help\n\n### Toolbar\n\n- New Project\n- Open\n- Save\n- Run\n- Build\n- Check\n- Settings\n- Python Env\n\n### Left Sidebar\n\n- Project tree\n- Recent/open files\n- search box\n- template shortcuts\n\n### Main Editor Area\n\n- tab strip\n- one editor per file\n- welcome tab when no file is open\n- supports Erire and Python documents\n\n### Right Sidebar\n\n- Outline\n- Inspector\n- Preview / details placeholder\n\n### Bottom Panel\n\n- Output\n- Terminal\n- Problems\n- Runtime Log\n\n### Status Bar\n\n- active file\n- cursor position\n- syntax mode\n- python interpreter\n- Erire toolchain path\n- build status\n\n---\n\n## D. Design System\n\n### Visual Direction\n\n- white/off-white shell\n- light gray panel grouping\n- thin cool-gray borders\n- dark gray text\n- restrained blue-gray accent\n- soft shadows on floating panels only\n- rounded corners on tool surfaces, not cartoonish bubbles\n\n### Suggested Palette\n\n- window background: `#f4f6f8`\n- panel background: `#ffffff`\n- secondary panel: `#eef1f4`\n- border: `#d9dee5`\n- primary text: `#1f2937`\n- muted text: `#64748b`\n- accent: `#5b7cfa`\n- success: `#16a34a`\n- warning: `#d97706`\n- error: `#dc2626`\n\n### Typography\n\n- Segoe UI on Windows for shell UI\n- Cascadia Code / Consolas for editors\n\n---\n\n## E. Architecture\n\n### 1. Shell / Window Manager\n\n- creates the main desktop window\n- owns menus, toolbars, split panels, status bar\n- dispatches commands to editor, runner, project, and settings subsystems\n\n### 2. Editor Engine\n\n- document model per tab\n- language mode: Erire or Python\n- dirty-state tracking\n- file load/save\n- later: token styling, diagnostics, completion\n\n### 3. Compiler Integration\n\n- invokes `erire.exe`\n- supports `run`, `check`, and `build`\n- routes output into bottom logs\n- translates failures into problem list entries\n\n### 4. Python Integration\n\n- configured interpreter path\n- run current `.py`\n- validate bridge scripts\n- show Python runtime errors in output panel\n\n### 5. Project System\n\n- detects `app.json`\n- loads folder tree\n- opens files into tabs\n- generates template projects\n\n### 6. Settings System\n\n- stores IDE configuration in `erire_studio.ini`\n- remembers compiler path, python path, font size, and last project\n\n### 7. Terminal Strategy\n\n- MVP: command output runner panel plus external developer shell launcher\n- v2: ConPTY-backed embedded terminal\n\n---\n\n## F. Recommended Source Structure\n\n```txt\nstudio/\n  main.c\n  app.c\n  app.h\n  settings.c\n  settings.h\n  runner.c\n  runner.h\n  project.c\n  project.h\n  templates.c\n  templates.h\n  theme.h\nresources/\n  erire_studio.rc\ndocs/\n  erire-studio.md\n  erire-next-language.md\n```\n\n---\n\n## G. Desktop App Implementation Plan\n\n1. Build the shell window and fixed IDE layout.\n2. Add multi-tab text editing.\n3. Add project tree loading and file open/save.\n4. Add build/run integration against `erire.exe`.\n5. Add Python interpreter configuration and command runner.\n6. Add problems/log panels.\n7. Add syntax services and completion.\n8. Add embedded preview and richer diagnostics.\n\n---\n\n## H. Example Screens\n\n### Welcome Screen\n\n- brand header\n- recent projects list\n- buttons for New Project / Open Project\n- template cards\n\n### Editor Screen\n\n- full layout with left project tree, central tabs, right inspector, bottom output\n\n### Settings Screen\n\n- compiler path\n- python path\n- editor font\n- font size\n- autosave\n\n### Build / Run"}, {"type": "Design", "id": "erire-next-language-design", "group": "design", "title": "Erire Next Language Design", "text": "# Erire Next Language Design\n\n## Executive Summary\n\nErire vNext should stay a UI-only language, but move from an absolute-positioned \"screen script\" into a declarative, component-oriented UI language with:\n\n- reusable components\n- flexible layouts instead of raw `x/y` everywhere\n- reactive state\n- reusable styles and themes\n- stronger event composition\n- project-level imports and modular structure\n- fast incremental rendering on top of the current C runtime\n\nThe identity to preserve is:\n\n- chain-based syntax\n- readable bracket calls\n- UI-first mental model\n- simple integration with Python via `py.call`\n\nThe design below keeps existing syntax valid while introducing a cleaner \"vNext layer\" above it.\n\n---\n\n## 1. Component System\n\n### Concept\n\nComponents give Erire reusable UI building blocks without introducing classes or OOP. A component is a named UI template with props and optional local state.\n\n### Syntax\n\n```txt\ncomponent Card[title; value] [\n    box.preset[\"card\"]\n       .children[\n           text.value[$title].preset[\"cardTitle\"]\n           text.value[$value].preset[\"metric\"]\n       ]\n]\n```\n\nComponent usage inside `screen.add` or another component:\n\n```txt\nscreen.add[Card[\"CPU\"; \"37%\"]]\n```\n\nNamed props for readability:\n\n```txt\nscreen.add[Card.title[\"CPU\"].value[\"37%\"]]\n```\n\n### Example 1\n\n```txt\ncomponent MetricTile[label; number] [\n    card.style[\"metricCard\"]\n        .children[\n            text.value[$label].style[\"mutedLabel\"]\n            text.value[$number].style[\"heroMetric\"]\n        ]\n]\n\nscreen.add[MetricTile[\"Memory\"; \"8.2 GB\"]]\nscreen.add[MetricTile[\"Disk\"; \"72%\"]]\n```\n\n### Example 2\n\n```txt\ncomponent ToolbarButton[text; action] [\n    button.text[$text]\n          .style[\"toolbarBtn\"]\n          .onClick[\n              event.emit[$action]\n          ]\n]\n\nscreen.add[ToolbarButton[\"Build\"; \"build.requested\"]]\n```\n\n### Integration With Existing Erire\n\n- `screen.add[...]` still stays the root composition point.\n- Existing elements remain legal.\n- A component expands into the same internal element tree the runtime already understands.\n- Existing `preset` and event concepts become building blocks inside components.\n\n---\n\n## 2. Layout System\n\n### Concept\n\nLayout is the most important evolution. Erire should stop forcing every serious app to hand-place everything. The vNext layout model should provide `row`, `column`, `stack`, and `grid`, while still allowing absolute positioning when needed.\n\n### Syntax\n\n```txt\nlayout.column[\n    gap[12]\n    padding[20]\n    children[\n        text.value[\"Hello\"]\n        button.text[\"Click\"]\n    ]\n]\n```\n\n### Core Layout Nodes\n\n- `layout.row[...]`\n- `layout.column[...]`\n- `layout.stack[...]`\n- `layout.grid[...]`\n- `layout.scroll[...]`\n\n### Shared Layout Properties\n\n- `gap[...]`\n- `padding[...]`\n- `align[start|center|end|stretch]`\n- `justify[start|center|between|around|end]`\n- `grow[...]`\n- `basis[...]`\n- `minW[...]`, `minH[...]`\n- `maxW[...]`, `maxH[...]`\n- `fillX[true|false]`, `fillY[true|false]`\n\n### Example 1\n\n```txt\nscreen.add[\n    layout.column[\n        padding[24]\n        gap[16]\n        children[\n            text.value[\"System Dashboard\"].style[\"pageTitle\"]\n            layout.row[\n                gap[16]\n                children[\n                    MetricTile[\"CPU\"; $snapshot.cpu.usage_label]\n                    MetricTile[\"RAM\"; $snapshot.ram.used_label]\n                    MetricTile[\"Disk\"; $snapshot.disk.used_label]\n                ]\n            ]\n        ]\n    ]\n]\n```\n\n### Example 2\n\n```txt\nscreen.add[\n    layout.grid[\n        columns[2]\n        gap[18]\n        children[\n            card.children[\n                text.value[\"Project\"]\n                input.bind[\"projectName\"]\n            ]\n            card.children[\n                text.value[\"Python Path\"]\n                input.bind[\"pythonPath\"]\n            ]\n        ]\n    ]\n]\n```\n\n### Integration With Existing Erire\n\n- Existing `.x/.y/.w/.h` remain valid for low-level placement or custom overlays.\n- Layout nodes are just new element kinds in the parser/runtime.\n- Child layout resolution runs before native control positioning.\n- The runtime can still lower final layout to Win32 rectangles, so the rendering backend remains incremental, not a rewrite.\n\n---\n\n## 3. State Management\n\n### Concept\n\nReactive state lets the UI update automatically when values change, instead of manually calling `screen.setText` for every change.\n\n### Syntax\n\n```txt\nstate[\"count\"; 0]\n```\n\nState mutation:\n\n```txt\nstate.set[\"count\"; $count + 1]\n```\n\nDerived state:\n\n```txt\nstate.computed[\"summary\"; $firstName + \" \" + $lastName]\n```\n\n### Example 1\n\n```txt\nstate[\"count\"; 0]\n\nscreen.add[\n    layout.column[\n        gap[10]\n        children[\n            text.value[\"Counter: \" + $count]\n            button.text[\"Increment\"].onClick[\n                state.set[\"count\"; $count + 1]\n            ]\n        ]\n    ]\n]\n```\n\n### Example 2\n\n```txt\nstate[\"search\"; \"\"]\n\nscreen.add[\n    input.bind[\"search\"]\n         .placeholder[\"Search docs\"]\n]\n\nscreen.add["}];
+  </script>
+  <script>
+window.__PAGES__ = window.__PAGES__ || {
+  current:["readme","current-language-reference","building-full-apps","dev-log","multiline-inputs"],
+  tutorial:["tutorial-1-first-window","tutorial-2-forms-events-bindings","tutorial-3-pages-navigation-webview","tutorial-4-python-bridge","tutorial-5-build-package"],
+  studio:["erire-studio-design"],
+  design:["erire-next-language-design"],
+  release:["msi-release"]
+};
+window.__SEARCH_INDEX__ = (window.__SEARCH_INDEX__ || []).concat([
+  {group:"release", id:"msi-release", title:"Erire MSI", text:"Erire MSI release page download installer first public release latest update features packaging windows installer studio links portfolio github instagram"}
+]);
+</script>
+<script src="app.js"></script>
+</body>
+</html>
